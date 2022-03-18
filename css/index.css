@@ -216,6 +216,7 @@ header{
 .main-section{
     display: grid;
     padding-left: 1rem;
+    grid-gap: 0.3rem;
     height: max-content;
     grid-template-columns: 2fr 1fr;
     margin-top: 5.6rem;
@@ -685,16 +686,18 @@ footer ul li{
 /*-----------------------*/
 @media screen and (max-width: 1023px){
     .article-photo {
-        width: 47.4vw;
+        width: 46.5vw;
     }
     .article-description-block{
         width: auto;
     }
     .main-section{
         grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+        padding-left: 0.7rem;
     }
     .article:nth-child(3) .article-photo {
-        width: 98.1vw;
+        width: 96.1vw;
     }
     .articles-block {
         justify-items: center;
@@ -735,12 +738,16 @@ footer ul li{
     height: 12.425rem;
 }
     .trending-new-text{
-    width: 43vw;
+    width: 41vw;
 }
+    .news-articles-container{
+        height: max-content;
+        width: max-content;
+    }
     .trending-new-description {
     margin: 1.788rem 1rem;
     justify-content: space-between;
-}
+    }
     .trending-new-photo::before{
     right: 17vw;
 }
@@ -773,19 +780,17 @@ footer ul li{
     grid-column: 1/4;
 }
     .articles-block {
-    grid-column: 1/4;
-    width: 100%;
-}
+        grid-column: 1/4;
+        width: min-content;
+    }
     .trending-news-block {
-        padding: 2.4vw;
+        padding: 2.15vw;
+        position: relative;
+        top: 2rem;
         grid-column: 1/4;
         grid-row: 4;
-        margin: 1.7rem 0.1rem;
+        width: 92vw;
     }
-
-    .article-photo {
-    width: 47.5vw;
-}
     .popular-tags-container {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -807,7 +812,7 @@ footer ul li{
     grid-template-columns: repeat(1, 1fr);
 }
     .older-post{
-    width: 97.2vw;
+    width: 100%;
 }
     .older-post-photo-container{
         width: 15.459rem;
@@ -855,7 +860,7 @@ footer ul li{
         justify-self: center;
     }
     .main-section{
-        width: 102%;
+        width: min-content;
         grid-template-columns: 1fr;
         justify-content: center;
     }
@@ -884,7 +889,7 @@ footer ul li{
     }
     .main-section{
         grid-gap: 0;
-        padding-left: 1.8rem;
+        margin-top: 6rem;
     }
     .news-banner{
         padding: 0.5rem 1rem 0.5rem 1rem;
@@ -990,7 +995,7 @@ footer ul li{
         font-size: 2.5vw;
     }
     html{
-        font-size: 4vw;
+        font-size: 3.4vw;
     }
     .main-section{
         padding-left: 0.6rem;
