@@ -991,6 +991,9 @@ footer ul li{
     .news-banner{
         margin-right: 3vw;
     }
+    header{
+        left: -0.3rem;
+    }
     .news-text{
         font-size: 2.5vw;
     }
