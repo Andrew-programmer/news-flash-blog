@@ -18,14 +18,13 @@
 }
 html{
     font-size: 1em;
+    overflow-x: hidden;
 }
 body{
     font-family: var(--font-family);
     background-color: var(--_body-background);
     padding: 0;
     margin: 0;
-}
-body, html{
     overflow-x: hidden;
 }
 hr{
@@ -125,7 +124,7 @@ body, .see-more-link, .tag-text, .popular-tag, .popular-tag-image{
 header{
     display: flex;
     width: 96.3vw;
-    position: sticky;
+    position: fixed;
     box-shadow: 0 1px 6px -4px black;
     color: white;
     top: 0;
@@ -219,7 +218,7 @@ header{
     padding-left: 1rem;
     height: max-content;
     grid-template-columns: 2fr 1fr;
-    margin-top: 1.6rem;
+    margin-top: 5.6rem;
 }
 /*------Breaking News------*/
 .news-block{
@@ -951,9 +950,6 @@ footer ul li{
     .see-more-button{
         margin-left: 3vw;
     }
-    .popular-tags-block{
-        padding-left: 1rem;
-    }
     .newsletter-block-header{
         padding-left: 1rem;
     }
@@ -998,9 +994,7 @@ footer ul li{
     }
     .main-section{
         padding-left: 0.6rem;
-    }
-    header{
-        width: auto;
+        margin-top: 5rem;
     }
     .quick-article .article-photo{
         width: 94.61vw;
