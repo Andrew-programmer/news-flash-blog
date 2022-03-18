@@ -1,0 +1,25 @@
+:root{
+    --_header-background-light: #f1f1f1;
+    --_main-color: black;
+    --_main-hovered-color: white;
+    --_sign-up-background: #f1f1f1;
+    --_article-background: #f1f1f1;
+    --_article-hovered-background: black;
+    --_header-active-link-color: black;
+    --_header-regular-link-color: #7d7d7d;
+    --_header-hovered-link-color: black;
+    --_trending-photo-border-color: #c0c0c0;
+    --_text-shadow-color: rgba(0, 0, 0, 0.07);
+    --_older-post-text-color: white;
+    --_older-post-background: black;
+    --_popular-tag-color: rgba(0, 0, 0, 0.55);
+    --_popular-tag-background: #f1f1f1;
+    --_popular-tag-hovered-color: rgba(0, 0, 0, 1);
+    --_mail-input-text-color: rgba(0, 0, 0, 0.7);
+    --_mail-input-background: white;
+    --_search-field-background: white;
+    --_press-esc-line: black;
+    --_close-button-border: #f1f1f1;
+
+    --_body-background: white;
+}
