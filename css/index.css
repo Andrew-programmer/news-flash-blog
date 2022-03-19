@@ -717,7 +717,7 @@ footer ul li{
         position: absolute;
         transition: all 0.3s ease;
         top: 121.1%;
-        right: 2%;
+        right: 1.3rem;
         text-align: center;
         background-color: var(--_header-background-light);
         box-shadow: 0 0 7px -4px black;
@@ -757,19 +757,6 @@ footer ul li{
     .sign-in-link, .sign-up-button-container{
     display: none;
 }
-    .header-navigation {
-    display: none;
-    position: absolute;
-    transition: all 0.3s ease;
-    top: 121.1%;
-    right: 2%;
-    text-align: center;
-    background-color: var(--_header-background-light);
-    box-shadow: 0 0 7px -4px black;
-    padding: 0.5rem 3rem;
-    flex-direction: column;
-    margin: 0;
-}
     .open-menu {
     display: block;
 }
@@ -784,12 +771,12 @@ footer ul li{
         width: min-content;
     }
     .trending-news-block {
-        padding: 2.15vw;
+        padding: 1.751vw;
         position: relative;
         top: 2rem;
         grid-column: 1/4;
         grid-row: 4;
-        width: 92vw;
+        width: 94.7%;
     }
     .popular-tags-container {
     grid-template-columns: repeat(2, 1fr);
@@ -806,7 +793,7 @@ footer ul li{
     --older-post-description-text: 1rem;
 }
     .quick-article .article-photo {
-        width: 47.791vw;
+        width: 46.991vw;
 }
     .older-posts-container{
     grid-template-columns: repeat(1, 1fr);
@@ -832,6 +819,9 @@ footer ul li{
     footer{
         grid-template-columns: 2fr repeat(1, 1fr);
     }
+    .header-navigation{
+        right: 5%;
+    }
     .social-container-description {
         width: 52vw;
     }
@@ -843,11 +833,14 @@ footer ul li{
     .article:nth-child(2) .article-description-block{
         margin-left: 0;
     }
+    .article-description-block{
+        width: 100%;
+    }
     .articles-block{
         grid-gap: 1.85rem 1rem;
     }
     .article:nth-child(3) .article-photo{
-        width: 97.6vw;
+        width: auto;
     }
     .quick-article{
         margin: 0.55rem;
@@ -896,7 +889,7 @@ footer ul li{
     }
     .trending-news-block {
         margin-top: 24rem;
-        width: 90vw;
+        width: 90.9vw;
     }
     .article:nth-child(1), .article:nth-child(3) {
         justify-content: flex-start;
