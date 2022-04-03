@@ -1,477 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1">
-    <title>Completed - NewsFlash | Home</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/light-theme.css" id="light-theme">
-    <link href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/scrollbar-styles.css">
-    <script type="text/javascript">
-        (function(){
-            // Выполняем код только на мобильных браузерах (на всякий случай)
-            if (typeof(window.orientation) !== 'undefined')
-            {
-                // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
-                function getDeviceWidth()
-                {
-                    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-                    // iOS returns available pixels, Android returns pixels / pixel ratio
-                    // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
-                    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-                        deviceWidth = deviceWidth / window.devicePixelRatio;
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<title>NewsFlash|Home</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/light-theme.css" id="light-theme">
+	<link href="css/index.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/scrollbar-styles.css">
+	<script type="text/javascript">
+	(function () {
+	// Выполняем    код только на мобильных браузерах (на всякий случай)
+	if (typeof (window.orientation) !== 'undefined') {
+	// Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
+	function getDeviceWidth() {
+	var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+	// iOS returns available pixels, Android returns pixels / pixel ratio
+	// http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
+	if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+	deviceWidth = deviceWidth / window.devicePixelRatio;
 
-                    return deviceWidth;
-                }
+	return deviceWidth;
+	}
 
-                var deviceWidth = getDeviceWidth();
-                var maxWidth = 900;
+	var deviceWidth = getDeviceWidth();
+	var maxWidth = 900;
 
-                if (deviceWidth < maxWidth)
-                {
-                    // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины
-                    // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в
-                    // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
-                    if (window.orientation == 0 || window.orientation == 180)
-                        document.write('<meta name="viewport" content="width=device-width">');
-                    else
-                        document.write('<meta name="viewport" content="width=device-height">');
-                }
-                else
-                    document.write('<meta name="viewport" content="width=' + maxWidth + '">');
-            }
-        })();
-    </script>
+	if (deviceWidth < maxWidth) {
+	// Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины
+	// экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в
+	// альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
+	if (window.orientation == 0 || window.orientation == 180)
+	document.write('<meta name="viewport" content="width=device-width">');
+	else
+	document.write('<meta name="viewport" content="width=device-height">');
+	} else
+	document.write('<meta name="viewport" content="width=' + maxWidth + '">');
+	}
+	})();
+	</script>
 </head>
 <body>
 <header>
-    <h1 class="header-logo"><a>NewsFlash</a></h1>
-    <nav class="header-navigation">
-        <a class="header-link active-link" href="#">Home</a>
-        <a class="header-link" href="#">Categories</a>
-        <a class="header-link" href="#">Reviews</a>
-        <a class="header-link" href="#">News</a>
-        <a class="header-link" href="#">Membership</a>
-        <a class="header-link" href="#">Contact</a>
-    </nav>
-    <div class="buttons-container">
-        <button class="change-theme-button button" id="change-theme">
-            <i class="ri-moon-line button-img" id="theme-icon"></i>
-        </button>
-        <button class="search-button button">
-            <i class="ri-search-line button-img"></i>
-        </button>
-        <span class="sign-in-link">Sign in</span>
-        <div class="sign-up-button-container">
-            <button class="sign-up-button" type="button">Sign up</button>
-        </div>
-        <!--Mobile Version-->
-        <i class="ri-menu-3-line open-menu button-img"></i>
-    </div>
+	<h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+	<nav class="header-navigation">
+		<a class="header-link active-link" href="index.html">Home</a>
+		<a class="header-link" href="#">Categories</a>
+		<a class="header-link" href="#">Reviews</a>
+		<a class="header-link" href="#">News</a>
+		<a class="header-link" href="#">Membership</a>
+		<a class="header-link" href="#">Contact</a>
+	</nav>
+	<div class="buttons-container">
+		<button class="change-theme-button button" id="change-theme">
+			<i class="ri-moon-line button-img" id="theme-icon"></i>
+		</button>
+		<button class="search-button button">
+			<i class="ri-search-line button-img"></i>
+		</button>
+		<span class="sign-in-link">Sign in</span>
+		<a href="sign-up-page.html">
+		<div class="sign-up-button-container">
+			<button class="sign-up-button" type="button">Sign up</button>
+		</div>
+		</a>
+		<!--Mobile Version-->
+		<i class="ri-menu-3-line open-menu button-img"></i>
+	</div>
 </header>
 <!--Search field-->
 <div class="search-field-block non-active">
-    <div class="email-input-container search-field-container">
-        <input type="email" class="mail-input search-input" placeholder="What are you looking for?">
-        <button type="submit" class="send-mail-button input-button">
-            <i class="ri-search-line input-button-image"></i>
-        </button>
-    </div>
-    <div class="close-search-button-container">
-        <button class="close-search-button">
-            <i class="ri-close-line close-image-icon"></i>
-        </button>
-    </div>
+	<div class="email-input-container search-field-container">
+		<input type="email" class="mail-input search-input" placeholder="What are you looking for?">
+		<button type="submit" class="send-mail-button input-button">
+			<i class="ri-search-line input-button-image"></i>
+		</button>
+	</div>
+	<div class="close-search-button-container">
+		<button class="close-search-button">
+			<i class="ri-close-line close-image-icon"></i>
+		</button>
+	</div>
 </div>
 <!---------------->
 <section class="main-section">
-    <div class="news-articles-container">
-        <aside class="news-block">
-            <div class="news-banner">BREAKING NEWS</div>
-            <span class="news-text">Apple announces a new partnership...</span>
-        </aside>
-        <div class="articles-block">
-        <article class="article">
-            <figure class="article-description-block">
-                <div class="article-photo">
-                    <img alt="Article Photo" src="#">
-                </div>
-                <figcaption class="article-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title">Is VR the future</h5>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="article">
-            <figure class="article-description-block">
-                <div class="article-photo">
-                    <img alt="Article Photo" src="#">
-                </div>
-                <figcaption class="article-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title">Is VR the future</h5>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="article">
-            <figure class="article-description-block">
-                <div class="article-photo">
-                    <img alt="Article Photo" src="#">
-                </div>
-                <figcaption class="article-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title">Is VR the future</h5>
-                </figcaption>
-            </figure>
-        </article>
-    </div>
-    </div>
-    <aside class="trending-news-block">
-        <h3 class="trending-news-heading">Trending news</h3>
-        <article class="trending-new">
-            <fugire class="trending-new-description">
-                <div class="trending-new-photo">
-                    <img alt="New's Photo" src="#">
-                </div>
-                <figcaption class="trending-new-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title trending-title">Sample article title</h5>
-                </figcaption>
-            </fugire>
-        </article>
-        <hr>
-        <article class="trending-new">
-            <fugire class="trending-new-description">
-                <div class="trending-new-photo">
-                    <img alt="New's Photo" src="#">
-                </div>
-                <figcaption class="trending-new-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title trending-title">Sample article title</h5>
-                </figcaption>
-            </fugire>
-        </article>
-        <hr>
-        <article class="trending-new">
-            <fugire class="trending-new-description">
-                <div class="trending-new-photo">
-                    <img alt="New's Photo" src="#">
-                </div>
-                <figcaption class="trending-new-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title trending-title">Sample article title</h5>
-                </figcaption>
-            </fugire>
-        </article>
-        <hr>
-        <article class="trending-new">
-            <fugire class="trending-new-description">
-                <div class="trending-new-photo">
-                    <img alt="New's Photo" src="#">
-                </div>
-                <figcaption class="trending-new-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title trending-title">Sample article title</h5>
-                </figcaption>
-            </fugire>
-        </article>
-        <hr>
-        <article class="trending-new">
-            <fugire class="trending-new-description">
-                <div class="trending-new-photo">
-                    <img alt="New's Photo" src="#">
-                </div>
-                <figcaption class="trending-new-text description-text">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h5 class="article-title trending-title">Sample article title</h5>
-                </figcaption>
-            </fugire>
-        </article>
-    </aside>
+	<div class="news-articles-container">
+		<aside class="news-block">
+			<div class="news-banner">BREAKING NEWS</div>
+			<span class="news-text">Apple announces a new partnership...</span>
+		</aside>
+		<div class="articles-block">
+			<article class="article">
+				<a href="page.html" class="link">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</a>
+			</article>
+			<article class="article">
+				<a href="page.html" class="link">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</a>
+			</article>
+			<article class="article">
+				<a href="page.html" class="link">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</a>
+			</article>
+		</div>
+	</div>
+	<aside class="trending-news-block">
+		<h3 class="trending-news-heading">Trending news</h3>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="#">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="#">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="#">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="#">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="#">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+	</aside>
 </section>
 
 <section class="quick-read-block">
-    <h1 class="quick-read-block-header section-header">Quick read</h1>
-    <div class="quick-articles-container">
-        <ul class="quick-read-articles">
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-            <li class="quick-article">
-                <article class="article">
-                    <figure class="article-description-block">
-                        <div class="article-photo">
-                            <img alt="Article Photo" src="#">
-                        </div>
-                        <figcaption class="article-text description-text">
-                            <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                            <h5 class="article-title">Is VR the future</h5>
-                        </figcaption>
-                    </figure>
-                </article>
-            </li>
-        </ul>
-    </div>
+	<h1 class="quick-read-block-header section-header">Quick read</h1>
+	<div class="list-buttons-container">
+		<button class="previous-post-button list-button"><i class="ri-arrow-right-s-line previous-post-button"></i>
+		</button>
+		<button class="next-post-button list-button"><i class="ri-arrow-right-s-line next-post-button"></i></button>
+	</div>
+	<div class="quick-articles-container">
+		<ul class="quick-read-articles">
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="#">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+		</ul>
+	</div>
 </section>
 
 <section class="older-posts-block">
-    <h1 class="older-post-block-header section-header">Older posts</h1>
-    <div class="older-posts-container">
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="older-post-block">
-            <figure class="older-post">
-                <div class="older-post-photo-container">
-                    <img alt="" class="older-post-photo" src="">
-                </div>
-                <figcaption class="older-post-description">
-                    <span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
-                    <h2 class="older-post-header">Sample article title</h2>
-                    <p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a
-                        tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
-                </figcaption>
-            </figure>
-        </article>
-    </div>
-    <div class="see-more-button">
-        <a class="see-more-link">SEE MORE</a><i class="ri-arrow-right-s-line"></i>
-    </div>
+	<h1 class="older-post-block-header section-header">Older posts</h1>
+	<div class="older-posts-container">
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+	</div>
+	<div class="see-more-button">
+		<a class="see-more-link">SEE MORE</a><i class="ri-arrow-right-s-line"></i>
+	</div>
 </section>
 
 <section class="popular-tags-block">
-    <h1 class="popular-tags-block-header section-header">Popular tags</h1>
-    <div class="popular-tags-container">
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Travel</span>
-        </a>
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Food</span>
-        </a>
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Technology</span>
-        </a>
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Health</span>
-        </a>
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Nature</span>
-        </a>
-        <a href="#" class="popular-tag">
-            <img src="#" alt="" class="popular-tag-image">
-            <span class="tag-text">#Fitness</span>
-        </a>
-    </div>
+	<h1 class="popular-tags-block-header section-header">Popular tags</h1>
+	<div class="popular-tags-container">
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Travel</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Food</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Technology</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Health</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Nature</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="#" alt="" class="popular-tag-image">
+			<span class="tag-text">#Fitness</span>
+		</a>
+	</div>
 </section>
 
 <section class="newsletter-block">
-    <h1 class="newsletter-block-header section-header">Newsletter</h1>
-    <form action="#" class="subscribe-from">
-        <h2 class="form-header">Subscribe to NewsFlash</h2>
-        <span class="form-description">Lorem ipsum dolor sit amet consectetur adipisicing quaerat dignissimos.</span>
-        <br>
-        <div class="email-input-container">
-            <input type="email" class="mail-input" placeholder="Enter your email address">
-            <button type="button" class="send-mail-button input-button">
-                <i class="ri-mail-send-line input-button-image"></i>
-            </button>
-        </div>
-    </form>
+	<h1 class="newsletter-block-header section-header">Newsletter</h1>
+	<form action="#" class="subscribe-from">
+		<h2 class="form-header">Subscribe to NewsFlash</h2>
+		<span class="form-description">Lorem ipsum dolor sit amet consectetur adipisicing quaerat dignissimos.</span>
+		<br>
+		<div class="email-input-container">
+			<input type="email" class="mail-input" placeholder="Enter your email address">
+			<button type="button" class="send-mail-button input-button">
+				<i class="ri-mail-send-line input-button-image"></i>
+			</button>
+		</div>
+	</form>
 </section>
 
 <footer>
-    <div class="social-container">
-        <h2 class="social-container-header footer-header"><a href="#">NewsFlash</a></h2>
-        <p class="social-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Facere, iure. Harum, animi dolores, nam, ad magni expedita.</p>
-        <ul class="social-media-list">
-            <li class="social-icon-container">
-                <a href="#">
-                    <i class="social-icon ri-instagram-line"></i>
-                </a>
-            </li>
-            <li class="social-icon-container">
-                <a href="#">
-                    <i class="social-icon ri-facebook-circle-line"></i>
-                </a>
-            </li>
-            <li class="social-icon-container">
-                <a href="#">
-                    <i class="social-icon ri-twitter-line"></i>
-                </a>
-            </li>
-            <li class="social-icon-container">
-                <a href="#">
-                    <i class="social-icon ri-pinterest-line"></i>
-                </a>
-            </li>
-        </ul>
-        <span class="copyright">©2021 NewsFlash. All rights reserved.</span>
-    </div>
-    <div class="categories-block">
-        <h3 class="categories-block-header footer-header">CATEGORIES</h3>
-        <ul class="category-list">
-            <li class="category"><a href="#" class="footer-link">Travel</a></li>
-            <li class="category"><a href="#" class="footer-link">Food</a></li>
-            <li class="category"><a href="#" class="footer-link">Technology</a></li>
-            <li class="category"><a href="#" class="footer-link">Health</a></li>
-            <li class="category"><a href="#" class="footer-link">Nature</a></li>
-            <li class="category"><a href="#" class="footer-link">Fitness</a></li>
-        </ul>
-    </div>
-    <div class="useful-links-block">
-        <h3 class="useful-links-block-header footer-header">USEFUL LINKS</h3>
-        <ul class="useful-link-list">
-            <li class="useful-link"><a href="#" class="footer-link">Home</a></li>
-            <li class="useful-link"><a href="#" class="footer-link">Elements</a></li>
-            <li class="useful-link"><a href="#" class="footer-link">Tags</a></li>
-            <li class="useful-link"><a href="#" class="footer-link">Authors</a></li>
-            <li class="useful-link"><a href="#" class="footer-link">Membership</a></li>
-        </ul>
-    </div>
-    <div class="company-block">
-        <h3 class="company-block-header footer-header">COMPANY</h3>
-        <ul class="chapter-list">
-            <li class="chapter"><a href="#" class="footer-link">Contact us</a></li>
-            <li class="chapter"><a href="#" class="footer-link">F.A.Q</a></li>
-            <li class="chapter"><a href="#" class="footer-link">Careers</a></li>
-            <li class="chapter"><a href="#" class="footer-link">Authors</a></li>
-            <li class="chapter"><a href="#" class="footer-link">Memberships</a></li>
-        </ul>
-    </div>
+	<div class="social-container">
+		<h2 class="social-container-header footer-header"><a href="#">NewsFlash</a></h2>
+		<p class="social-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Facere, iure. Harum, animi dolores, nam, ad magni expedita.</p>
+		<ul class="social-media-list">
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-instagram-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-facebook-circle-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-twitter-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-pinterest-line"></i>
+				</a>
+			</li>
+		</ul>
+		<span class="copyright">©2021 NewsFlash. All rights reserved.</span>
+	</div>
+	<div class="categories-block">
+		<h3 class="categories-block-header footer-header">CATEGORIES</h3>
+		<ul class="category-list">
+			<li class="category"><a href="#" class="footer-link">Travel</a></li>
+			<li class="category"><a href="#" class="footer-link">Food</a></li>
+			<li class="category"><a href="#" class="footer-link">Technology</a></li>
+			<li class="category"><a href="#" class="footer-link">Health</a></li>
+			<li class="category"><a href="#" class="footer-link">Nature</a></li>
+			<li class="category"><a href="#" class="footer-link">Fitness</a></li>
+		</ul>
+	</div>
+	<div class="useful-links-block">
+		<h3 class="useful-links-block-header footer-header">USEFUL LINKS</h3>
+		<ul class="useful-link-list">
+			<li class="useful-link"><a href="#" class="footer-link">Home</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Elements</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Tags</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Authors</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Membership</a></li>
+		</ul>
+	</div>
+	<div class="company-block">
+		<h3 class="company-block-header footer-header">COMPANY</h3>
+		<ul class="chapter-list">
+			<li class="chapter"><a href="#" class="footer-link">Contact us</a></li>
+			<li class="chapter"><a href="#" class="footer-link">F.A.Q</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Careers</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Authors</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Memberships</a></li>
+		</ul>
+	</div>
 </footer>
 <script src="js/variables.js"></script>
 <script src="js/index.js"></script>
+<script src="js/theme-module.js"></script>
 </body>
 </html>
