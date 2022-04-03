@@ -1,9 +1,4 @@
 $(function (){
-    function addNewLinks() {
-        $headerNav.append('<a class="header-link sign" id="sign-in" href="#">Sign in</a>');
-        $headerNav.append('<a class="header-link sign" id="sign-up" href="#">Sign up</a>');
-    }
-
     if (screenWidth < 1024){
         addNewLinks();
     }
@@ -22,6 +17,12 @@ $(function (){
         }
     })
 
+    $body.keydown(function (event){
+        if(event.keyCode === 27 && $searchField.hasClass('active')){
+            showSearchField($searchField);
+        }
+    });
+
     $changeThemeButton.click(function (){
         let $lightThemeScript = $("#light-theme");
         let $darkThemeScript = $("#dark-theme");
@@ -35,12 +36,6 @@ $(function (){
         $themeIcon.toggleClass('ri-moon-line ri-sun-line');
     });
 
-    function showSearchField(elem){
-        let currentOpacity = elem.hasClass('active') ? 0: 1;
-        elem.toggleClass('active non-active');
-        elem.fadeTo(0.2, currentOpacity, 'linear');
-    }
-
     $searchButton.click(function () {
         showSearchField($searchField);
     });
@@ -48,7 +43,6 @@ $(function (){
     $closeButton.click(function () {
         showSearchField($searchField);
     });
-
     $inputSearchButton.click(function (){
         $input.val('');
     });
@@ -59,4 +53,25 @@ $(function (){
         $headerNav.show(300);
         $headerNav.css('display', currentDisplayStatus);
     });
+
+    $listButton.click(function (event) {
+        let quickArticleWidth = $(event.target).hasClass('next-post-button') ?
+            +($quickArticle.outerWidth(true)):
+            -($quickArticle.outerWidth(true));
+        let wayWidth = +$quickPostsList.css('right').slice(0, -2) + quickArticleWidth;
+        $quickPostsList.css('right', `${wayWidth}px`);
+
+    });
+
+    function showSearchField(elem){
+        let currentOpacity = elem.hasClass('active') ? 0: 1;
+        elem.toggleClass('active non-active');
+        elem.fadeTo(0.2, currentOpacity, 'linear');
+    }
+
+    function addNewLinks() {
+        $headerNav.append('<a class="header-link sign" id="sign-in" href="#">Sign in</a>');
+        $headerNav.append('<a class="header-link sign" id="sign-up" href="sign-up-page.html">Sign up</a>');
+    }
+
 });
