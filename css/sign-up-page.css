@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{
+    --font-family: 'Poppins', sans-serif;
+}
+
+body{
+    /*background: linear-gradient(-45deg, #FFF6B7, #F6416C, #FFF6B7);*/
+    background: linear-gradient(-45deg, #7a74e6, #871dd3, #fb2983, #ffcbe0);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    font-family: var(--font-family);
+}
+a{
+    text-decoration: none;
+    color: var(--_sign-up-form-main-color);
+}
+html{
+    font-size: 1em;
+}
+.text{
+    color: var(--_sign-up-form-main-color);
+}
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-flow: column wrap;
+}
+
+
+.sign-up-form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 17rem;
+    background-color: var(--_sign-up-form-background);
+    padding: 1.3rem;
+    border-radius: 0.4rem;
+    align-items: flex-start;
+}
+.form-header {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    width: 100%;
+    border: 1px solid var(--_trending-photo-border-color);
+    height: 2.6em;
+    margin: 0;
+    transition: 0.2s ease;
+}
+.register-on-heading{
+    margin-bottom: 0;
+}
+.logo{
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    font-size: 4rem;
+}
+.input-container{
+    width: 100%;
+    margin: 0 0 1em 0;
+    height: max-content;
+    padding: 0;
+    background: linear-gradient(-60deg, limegreen, deepskyblue, darkviolet, yellow, limegreen);
+    animation: changeGradient linear infinite 2s;
+}
+input:focus{
+    margin: 0.2rem;
+    width: 96.1%;
+    outline: none;
+    border: none;
+}
+.register-button{
+    border: 1px solid var(--_trending-photo-border-color);
+    padding: 0.7rem 1.1rem;
+    transition: 0.2s ease;
+    position: relative;
+    left: 30%;
+}
+.register-button:hover{
+    transform: scale(1.1);
+}
+.register-button:active{
+    transform: scale(0.8);
+}
+@keyframes changeGradient {
+    0%{
+        background-position-x: 0;
+    }
+
+    100%{
+        background-position-x: -17em;
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

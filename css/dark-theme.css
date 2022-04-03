@@ -22,5 +22,10 @@
     --_press-esc-line: white;
     --_close-button-border: #252830;
 
+    --_scrollbar-thumb-color: #3f4254;
+    --_scrollbar-thumb-hovered-color: #30323f;
+    --_scrollbar-track-color: #28292d;
+
+
     --_body-background: #131417;
 }
