@@ -21,5 +21,12 @@
     --_press-esc-line: black;
     --_close-button-border: #f1f1f1;
 
+    --_scrollbar-thumb-color: #c5c5c5;
+    --_scrollbar-thumb-hovered-color: #a9a9a9;
+    --_scrollbar-track-color: #f1f1f1;
+
     --_body-background: white;
+
+    --_sign-up-form-background: rgba(241, 241, 239, 0.8);
+    --_sign-up-form-main-color: var(--_header-background-light);
 }
