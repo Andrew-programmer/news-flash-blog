@@ -16,4 +16,12 @@ const $previousPostButton = $(".previous-post-button");
 const $nextPostButton = $(".next-post-button");
 const $listButton = $(".list-button");
 
+const $accountImg = $(".account-img");
+const $accountLink = $(".account-link");
+const $createArticleImg = $(".new-article-img");
+const $notPublishedImg = $(".not-published-img");
+const $publishedImg = $(".published-img");
+const $pageContainer = $(".page-manipulation-container");
+const $manipulation = $(".manipulation");
+
 let screenWidth = document.documentElement.clientWidth;
