@@ -8,7 +8,7 @@
     --_header-active-link-color: white;
     --_header-regular-link-color: #afb6cd;
     --_header-hovered-link-color: white;
-    --_trending-photo-border-color: #c0c0c0;
+    --_trending-photo-border-color: rgba(192, 192, 192, 0.6);
     --_text-shadow-color: rgba(255, 255, 255, 0.1);
     --_older-post-text-color: white;
     --_older-post-background: #131417;
@@ -26,6 +26,12 @@
     --_scrollbar-thumb-hovered-color: #30323f;
     --_scrollbar-track-color: #28292d;
 
+    --_sign-up-form-background: rgba(0, 0, 0, 0.8);
+    --_sign-up-body-background: linear-gradient(-45deg, #1e0000, #32170e, #150012, #01004f);
+    --_sign-up-button-border: #f1f1f1;
+    --_sign-up-button-background: black;
+
+    --_account-block-background: rgb(29 31 38);
 
     --_body-background: #131417;
 }
