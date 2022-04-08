@@ -28,5 +28,9 @@
     --_body-background: white;
 
     --_sign-up-form-background: rgba(241, 241, 239, 0.8);
-    --_sign-up-form-main-color: var(--_header-background-light);
+    --_sign-up-body-background: linear-gradient(-45deg, #7a74e6, #871dd3, #fb2983, #ffcbe0);
+    --_sign-up-button-border: var(--_trending-photo-border-color);
+    --_sign-up-button-background: var(--_header-background-light);
+
+    --_account-block-background: rgb(223 223 223);
 }
