@@ -34,6 +34,11 @@ $(function (){
         lightThemeCheck ? $lightThemeScript.remove() : $darkThemeScript.remove();
         $head.prepend(prependTag);
         $themeIcon.toggleClass('ri-moon-line ri-sun-line');
+        $accountImg.toggleClass('ri-account-circle-line ri-account-circle-fill');
+        $accountLink.toggleClass('ri-user-line ri-user-fill');
+        $createArticleImg.toggleClass('ri-file-edit-line ri-file-edit-fill');
+        $notPublishedImg.toggleClass('ri-file-copy-2-line ri-file-copy-2-fill');
+        $publishedImg.toggleClass('ri-task-line ri-task-fill');
     });
 
     $searchButton.click(function () {
@@ -61,6 +66,12 @@ $(function (){
         let wayWidth = +$quickPostsList.css('right').slice(0, -2) + quickArticleWidth;
         $quickPostsList.css('right', `${wayWidth}px`);
 
+    });
+    $pageContainer.mouseenter(function (event){
+        $manipulation.show(200);
+    });
+    $pageContainer.mouseleave(function (){
+        $manipulation.hide(200);
     });
 
     function showSearchField(elem){
