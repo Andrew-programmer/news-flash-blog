@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<title>NewsFlash|Account</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/light-theme.css" id="light-theme">
+	<link href="css/index.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/scrollbar-styles.css">
+	<script type="text/javascript">
+        (function () {
+            // Выполняем    код только на мобильных браузерах (на всякий случай)
+            if (typeof (window.orientation) !== 'undefined') {
+                // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
+                function getDeviceWidth() {
+                    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+                    // iOS returns available pixels, Android returns pixels / pixel ratio
+                    // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
+                    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+                        deviceWidth = deviceWidth / window.devicePixelRatio;
+
+                    return deviceWidth;
+                }
+
+                var deviceWidth = getDeviceWidth();
+                var maxWidth = 900;
+
+                if (deviceWidth < maxWidth) {
+                    // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины
+                    // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в
+                    // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
+                    if (window.orientation == 0 || window.orientation == 180)
+                        document.write('<meta name="viewport" content="width=device-width">');
+                    else
+                        document.write('<meta name="viewport" content="width=device-height">');
+                } else
+                    document.write('<meta name="viewport" content="width=' + maxWidth + '">');
+            }
+        })();
+	</script>
+</head>
+<body>
+<header>
+	<h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+	<div class="buttons-container">
+		<button class="change-theme-button button" id="change-theme">
+			<i class="ri-moon-line button-img" id="theme-icon"></i>
+		</button>
+	</div>
+</header>
+<aside class="page-manipulation-container">
+	<div class="page-manipulation-block">
+		<figure class="account-block">
+			<i class="ri-account-circle-line account-img"></i>
+			<!--		<i class="ri-account-circle-fill account-img"></i>-->
+			<figcaption class="account-nickname">
+				Nickname
+			</figcaption>
+		</figure>
+		<nav class="page-manipulation-menu">
+			<i class="ri-file-edit-line new-article-img img"></i>
+			<a href="#" class="manipulation create-article">New Article</a>
+			<br>
+			<i class="ri-file-copy-2-line not-published-img img"></i>
+			<a href="#" class="manipulation show-not-published">Not published <sup class="not-published-count">2</sup></a>
+			<br>
+			<i class="ri-task-line published-img img"></i>
+			<a href="#" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
+			<br>
+		</nav>
+	</div>
+</aside>
+
+<script src="js/variables.js"></script>
+<script src="js/index.js"></script>
+<script src="js/theme-module.js"></script>
+</body>
+</html>
