@@ -1,0 +1,100 @@
+html{
+    font-size: 1em;
+}
+html, body{
+    overflow-y: hidden;
+}
+header{
+    width: 97.1%;
+}
+.buttons-container{
+    width: auto;
+}
+.page-manipulation-block{
+    display: flex;
+    flex-flow: column;
+    height: 28rem;
+    justify-content: space-between;
+}
+.account-block{
+    margin: 0;
+    text-align: center;
+    background-color: var(--_account-block-background);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 0.2s ease;
+}
+.account-nickname{
+    color: var(--_main-color);
+}
+.account-img{
+    font-size: 4rem;
+}
+.manipulation{
+    margin-bottom: 1rem;
+}
+.manipulation:hover{
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: var(--_account-block-background);
+}
+.page-manipulation-container{
+    width: max-content;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding: 5rem 1rem;
+    background-color: var(--_header-background-light);
+}
+.page-manipulation-menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ri-account-circle-fill, .ri-file-edit-fill, .ri-file-copy-2-fill, .ri-task-fill{
+    color: #f1f1f1;
+}
+.img{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .account-nickname{
+        display: none;
+    }
+    .account-block{
+        background-color: transparent;
+        padding: 0;
+        padding-top: 1rem;
+    }
+    .account-img,.new-article-img, .not-published-img,.published-img{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    .page-manipulation-block{
+        height: 22rem;
+    }
+    .manipulation{
+        display: none;
+        font-size: 0.8rem;
+    }
+    .img{
+        display: block;
+        width: min-content;
+        transition: 0.2s ease;
+    }
+    .page-manipulation-menu{
+        align-content: center;
+        transition: 0.3s ease;
+    }
+    /*.page-manipulation-container:hover .manipulation{*/
+    /*    display: inline-block;*/
+    /*}*/
+    .page-manipulation-container:hover .img{
+        font-size: 1.4rem;
+    }
+    .page-manipulation-container:hover .page-manipulation-menu{
+        align-items: center;
+    }
+}
