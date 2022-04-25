@@ -16,6 +16,11 @@
     --footer-font-size: 1rem;
     --breaking-news-block-fontSize: 0.9rem;
 }
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
 html{
     font-size: 1em;
     overflow-x: hidden;
