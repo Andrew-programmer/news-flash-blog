@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NewsFlash|Page</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/variables.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="js/index.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/light-theme.css" id="light-theme">
+<!--	<link rel="stylesheet" href="css/light-theme.css" id="light-theme">-->
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/page.css">
 	<link rel="stylesheet" href="css/scrollbar-styles.css">
@@ -69,10 +72,14 @@
 		<button class="search-button button">
 			<i class="ri-search-line button-img"></i>
 		</button>
-		<span class="sign-in-link">Sign in</span>
+		<a href="sign-in-page.html">
+			<span class="sign-in-link">Sign in</span>
+		</a>
+		<a href="sign-up-page.html">
 		<div class="sign-up-button-container">
 			<button class="sign-up-button" type="button">Sign up</button>
 		</div>
+		</a>
 		<!--Mobile Version-->
 		<i class="ri-menu-3-line open-menu button-img"></i>
 	</div>
@@ -213,7 +220,5 @@
 		</ul>
 	</div>
 </footer>
-<script defer src="js/variables.js"></script>
-<script defer src="js/index.js"></script>
 </body>
 </html>

@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1">
 	<title>NewsFlash|Account</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-	        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/variables.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="js/index.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/light-theme.css" id="light-theme">
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/account.css">
 	<link rel="stylesheet" href="css/scrollbar-styles.css">
@@ -55,7 +56,7 @@
 <aside class="page-manipulation-container">
 	<div class="page-manipulation-block">
 		<figure class="account-block">
-			<i class="ri-account-circle-line account-img"></i>
+			<i class="ri-account-circle-line img account-img"></i>
 			<!--		<i class="ri-account-circle-fill account-img"></i>-->
 			<figcaption class="account-nickname">
 				Nickname
@@ -71,12 +72,17 @@
 			<i class="ri-task-line published-img img"></i>
 			<a href="#" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
 			<br>
+			<i class="ri-star-line fav-img img"></i>
+			<a href="#" class="manipulation show-fav">Favourite <sup class="published-count">2</sup></a>
+
 		</nav>
 	</div>
 </aside>
 
-<script src="js/variables.js"></script>
-<script src="js/index.js"></script>
-<script src="js/theme-module.js"></script>
+<div class="content">
+<!--Тут будет грузиться нужный контент-->
+</div>
+
+
 </body>
 </html>
