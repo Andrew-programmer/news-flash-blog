@@ -13,25 +13,28 @@ header{
 .page-manipulation-block{
     display: flex;
     flex-flow: column;
-    height: 28rem;
+    height: 29rem;
     justify-content: space-between;
 }
+.account-block, .account-nickname, .account-img{
+    transition: 0.2s ease;
+}
+
 .account-block{
     margin: 0;
     text-align: center;
-    background-color: var(--_account-block-background);
     border-radius: 1rem;
-    padding: 1rem;
     transition: 0.2s ease;
 }
 .account-nickname{
-    color: var(--_main-color);
+    display: none;
 }
 .account-img{
-    font-size: 4rem;
+    font-size: 2rem;
 }
 .manipulation{
-    margin-bottom: 1rem;
+    display: none;
+    margin-bottom: 0.1rem;
 }
 .manipulation:hover{
     border-radius: 1rem;
@@ -45,6 +48,37 @@ header{
     padding: 5rem 1rem;
     background-color: var(--_header-background-light);
 }
+.img{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.page-manipulation-container:hover .account-img{
+    font-size: 4rem;
+}
+.page-manipulation-container:hover .manipulation, .img{
+    text-align: center;
+}
+
+.hovered{
+    margin-bottom: 0;
+}
+.page-manipulation-container:hover .page-manipulation-block{
+    height: 30rem;
+}
+.page-manipulation-container:hover .account-block{
+    background-color: var(--_account-block-background);
+    padding: 1rem 2.1rem;
+    transition: 0.2s ease;
+}
+.page-manipulation-container:hover .account-block:hover{
+    background-color: var(--_header-background-light);
+    outline: 1px solid black;
+    cursor: pointer;
+}
+.page-manipulation-container:hover .account-nickname{
+    color: var(--_main-color);
+}
+
 .page-manipulation-menu{
     display: flex;
     flex-direction: column;
@@ -52,28 +86,23 @@ header{
     justify-content: space-evenly;
 }
 
-.ri-account-circle-fill, .ri-file-edit-fill, .ri-file-copy-2-fill, .ri-task-fill{
-    color: #f1f1f1;
-}
-.img{
-    display: none;
+.ri-account-circle-fill, .ri-file-edit-fill, .ri-file-copy-2-fill, .ri-task-fill, .ri-star-fill{
+    color: var(--_main-color);
 }
 
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) and (min-width: 300px){
     .account-nickname{
-        display: none;
+        font-size: 0.9rem;
     }
     .account-block{
-        background-color: transparent;
-        padding: 0;
-        padding-top: 1rem;
-    }
-    .account-img,.new-article-img, .not-published-img,.published-img{
-        font-size: 2rem;
-        padding: 1rem;
+        text-align: center;
     }
     .page-manipulation-block{
-        height: 22rem;
+        height: 26rem;
+    }
+    .page-manipulation-container:hover .account-img{
+        font-size: 2rem;
     }
     .manipulation{
         display: none;
@@ -82,17 +111,21 @@ header{
     .img{
         display: block;
         width: min-content;
+        font-size: 1.5rem;
         transition: 0.2s ease;
+    }
+    .hovered{
+        margin-bottom: 1rem;
     }
     .page-manipulation-menu{
         align-content: center;
         transition: 0.3s ease;
     }
-    /*.page-manipulation-container:hover .manipulation{*/
-    /*    display: inline-block;*/
-    /*}*/
     .page-manipulation-container:hover .img{
         font-size: 1.4rem;
+    }
+    .page-manipulation-container:hover .page-manipulation-block{
+        height: 27rem;
     }
     .page-manipulation-container:hover .page-manipulation-menu{
         align-items: center;
