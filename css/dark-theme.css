@@ -1,4 +1,4 @@
-:root{
+:root {
     --_header-background-light: #252830;
     --_main-color: white;
     --_main-hovered-color: white;
@@ -34,4 +34,9 @@
     --_account-block-background: rgb(29 31 38);
 
     --_body-background: #131417;
+
+    --_input-focus-outline: #3e414a;
+    --_drag-and-drop-background: rgba(192, 192, 192, 0.07);
+    --_submit-button-background: rgba(192, 192, 192, 0.07);
+    --_input-border: #252830;
 }

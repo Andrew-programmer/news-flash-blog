@@ -33,7 +33,18 @@ let $manipulation = $(".manipulation");
 let $imgs = $(".img");
 let screenWidth = document.documentElement.clientWidth;
 
-$(function (){
+let $article = $(".article");
+let $askForm = `<div class="ask-form">
+\t\t<div class="sign-up-button-container">
+\t\t\t<button class="sign-up-button" type="button">Public</button>
+\t\t</div>
+\t\t<div class="sign-up-button-container">
+\t\t\t<button class="sign-up-button" type="button">Look</button>
+\t\t</div>
+\t</div>`;
+
+
+$(function () {
     $body = $('body');
 
     lightTheme = '<link rel="stylesheet" href="css/light-theme.css" id="light-theme">';
@@ -68,4 +79,14 @@ $(function (){
     $manipulation = $(".manipulation");
     $imgs = $(".img");
     screenWidth = document.documentElement.clientWidth;
+
+    $article = $(".article");
+    $askForm = `<div class="ask-form">
+\t\t<div class="sign-up-button-container">
+\t\t\t<button class="sign-up-button" type="button">Public</button>
+\t\t</div>
+\t\t<div class="sign-up-button-container">
+\t\t\t<button class="sign-up-button" type="button">Look</button>
+\t\t</div>
+\t</div>`
 })

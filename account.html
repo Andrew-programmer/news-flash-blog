@@ -7,11 +7,16 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/variables.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/loadpage.js"></script>
 	<script src="js/index.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="css/new-article.css">
+	<link rel="stylesheet" href="css/favourite.css">
+	<link rel="stylesheet" href="css/not-published.css">
 	<link rel="stylesheet" href="css/scrollbar-styles.css">
+	<script src="js/account.js"></script>
 	<script type="text/javascript">
         (function () {
             // Выполняем    код только на мобильных браузерах (на всякий случай)
@@ -53,35 +58,37 @@
 		</button>
 	</div>
 </header>
-<aside class="page-manipulation-container">
-	<div class="page-manipulation-block">
-		<figure class="account-block">
-			<i class="ri-account-circle-line img account-img"></i>
-			<!--		<i class="ri-account-circle-fill account-img"></i>-->
-			<figcaption class="account-nickname">
-				Nickname
-			</figcaption>
-		</figure>
-		<nav class="page-manipulation-menu">
-			<i class="ri-file-edit-line new-article-img img"></i>
-			<a href="#" class="manipulation create-article">New Article</a>
-			<br>
-			<i class="ri-file-copy-2-line not-published-img img"></i>
-			<a href="#" class="manipulation show-not-published">Not published <sup class="not-published-count">2</sup></a>
-			<br>
-			<i class="ri-task-line published-img img"></i>
-			<a href="#" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
-			<br>
-			<i class="ri-star-line fav-img img"></i>
-			<a href="#" class="manipulation show-fav">Favourite <sup class="published-count">2</sup></a>
+<section class="main-container">
+	<aside class="page-manipulation-container">
+		<div class="page-manipulation-block">
+			<figure class="account-block">
+				<i class="ri-account-circle-line img account-img"></i>
+				<figcaption class="account-nickname">
+					Nickname
+				</figcaption>
+			</figure>
+			<nav class="page-manipulation-menu">
+				<i class="ri-file-edit-line new-article-img img"></i>
+				<a href="#" onclick="$('#mydiv').load('new-article.html'); return false" class="manipulation create-article">New Article</a>
+				<br>
+				<i class="ri-file-copy-2-line not-published-img img"></i>
+				<a href="#" onclick="$('#mydiv').load('not-published.html'); $(body).append('<script src=js/not-published.js></script>'); return false" class="manipulation show-not-published">Not published <sup class="not-published-count">2</sup></a>
+				<br>
+				<i class="ri-task-line published-img img"></i>
+				<a href="#" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
+				<br>
+				<i class="ri-star-line fav-img img"></i>
+				<a href="#" onclick="$('#mydiv').load('favourite.html'); return false" class="manipulation show-fav">Favourite <sup class="published-count">2</sup></a>
 
-		</nav>
+			</nav>
+		</div>
+	</aside>
+
+	<div class="content" id="mydiv">
+		<!--Тут будет грузиться нужный контент-->
 	</div>
-</aside>
+</section>
 
-<div class="content">
-<!--Тут будет грузиться нужный контент-->
-</div>
 
 
 </body>

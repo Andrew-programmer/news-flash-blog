@@ -71,6 +71,7 @@ $(function (){
         closeNickName();
         unChangeImgClass();
     });
+
     function changeTheme() {
         sendChangeThemeToStorage();
         let $lightThemeScript = $("#light-theme");
@@ -143,4 +144,5 @@ $(function (){
 
         return localStorage.getItem('theme');
     }
+
 });

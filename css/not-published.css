@@ -1,0 +1,29 @@
+@import "index.css";
+@import "favourite.css";
+
+.ask-form{
+    display: none;
+    flex-direction: row;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sign-up-button-container{
+    display: block;
+}
+.sign-up-button{
+    padding: 0.5rem 3rem;
+}
+#hr{
+    width: 100%;
+    background: linear-gradient(90deg, var(--_body-background),var(--_header-background-light),var(--_body-background));
+    height: 0.1rem;
+    margin: 1rem 0;
+}

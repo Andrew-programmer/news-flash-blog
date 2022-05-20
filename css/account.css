@@ -1,11 +1,8 @@
 html{
     font-size: 1em;
 }
-html, body{
-    overflow-y: hidden;
-}
 header{
-    width: 97.1%;
+    width: 98.1%;
 }
 .buttons-container{
     width: auto;
@@ -45,6 +42,8 @@ header{
     width: max-content;
     min-height: 100vh;
     padding-top: 5rem;
+    position: fixed;
+    z-index: 1;
     padding: 5rem 1rem;
     background-color: var(--_header-background-light);
 }
@@ -90,6 +89,10 @@ header{
     color: var(--_main-color);
 }
 
+header .buttons-container{
+    width: 2rem;
+}
+
 
 @media screen and (max-width: 768px) and (min-width: 300px){
     .account-nickname{
@@ -99,19 +102,19 @@ header{
         text-align: center;
     }
     .page-manipulation-block{
-        height: 26rem;
+        height: 31rem;
     }
     .page-manipulation-container:hover .account-img{
         font-size: 2rem;
     }
     .manipulation{
         display: none;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .img{
         display: block;
         width: min-content;
-        font-size: 1.5rem;
+        font-size: 2rem;
         transition: 0.2s ease;
     }
     .hovered{
@@ -122,10 +125,10 @@ header{
         transition: 0.3s ease;
     }
     .page-manipulation-container:hover .img{
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
     .page-manipulation-container:hover .page-manipulation-block{
-        height: 27rem;
+        height: 33rem;
     }
     .page-manipulation-container:hover .page-manipulation-menu{
         align-items: center;

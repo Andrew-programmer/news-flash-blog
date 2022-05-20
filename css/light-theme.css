@@ -33,4 +33,7 @@
     --_sign-up-button-background: var(--_header-background-light);
 
     --_account-block-background: rgb(223 223 223);
+
+    --_submit-button-background: rgba(129, 118, 118, 0.07);
+    --_input-border: #7d7d7d;
 }

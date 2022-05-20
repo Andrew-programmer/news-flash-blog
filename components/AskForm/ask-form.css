@@ -1,0 +1,14 @@
+@import "../../css/index.css";
+
+.ask-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35.6rem;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
