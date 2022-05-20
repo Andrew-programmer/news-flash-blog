@@ -28,7 +28,6 @@ html{
 }
 body{
     font-family: var(--font-family);
-    scroll-behavior: smooth;
     background-color: var(--_body-background);
     padding: 0;
     margin: 0;
@@ -39,7 +38,6 @@ hr{
 }
 a{
     color: var(--_main-color);
-    scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-decoration: none;
