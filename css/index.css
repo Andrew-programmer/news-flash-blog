@@ -18,6 +18,7 @@
 }
 
 *{
+    -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html{
@@ -36,6 +37,8 @@ hr{
 }
 a{
     color: var(--_main-color);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-decoration: none;
     cursor: pointer;
 }
