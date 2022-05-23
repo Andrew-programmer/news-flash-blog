@@ -1,5 +1,5 @@
 @import "index.css";
-@import "favourite.css";
+@import "favouriteAndPublished.css";
 
 .ask-form{
     display: none;
@@ -26,4 +26,10 @@
     background: linear-gradient(90deg, var(--_body-background),var(--_header-background-light),var(--_body-background));
     height: 0.1rem;
     margin: 1rem 0;
+}
+
+@media screen and (max-width: 425px){
+    .sign-up-button {
+        padding: 0.3rem 1.6rem;
+    }
 }

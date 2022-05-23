@@ -12,10 +12,6 @@
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/account.css">
-	<link rel="stylesheet" href="css/new-article.css">
-	<link rel="stylesheet" href="css/favourite.css">
-	<link rel="stylesheet" href="css/not-published.css">
-	<link rel="stylesheet" href="css/scrollbar-styles.css">
 	<script src="js/account.js"></script>
 	<script type="text/javascript">
         (function () {
@@ -75,7 +71,7 @@
 				<a href="#" onclick="$('#mydiv').load('not-published.html'); $(body).append('<script src=js/not-published.js></script>'); return false" class="manipulation show-not-published">Not published <sup class="not-published-count">2</sup></a>
 				<br>
 				<i class="ri-task-line published-img img"></i>
-				<a href="#" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
+				<a href="#" onclick="$('#mydiv').load('published.html'); return false" class="manipulation show-published">Published <sup class="published-count">2</sup></a>
 				<br>
 				<i class="ri-star-line fav-img img"></i>
 				<a href="#" onclick="$('#mydiv').load('favourite.html'); return false" class="manipulation show-fav">Favourite <sup class="published-count">2</sup></a>

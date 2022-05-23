@@ -1,4 +1,3 @@
-debugger
 $(function (){
     $askForm = `<div class="ask-form">
 \t\t<div class="sign-up-button-container">
@@ -12,7 +11,6 @@ $(function (){
 \t\t</div>
 \t</div>`;
     $(".article").click((event) => {
-        debugger
         event.preventDefault();
         if($(".ask-form").length){
             $('.ask-form').slideUp(200);

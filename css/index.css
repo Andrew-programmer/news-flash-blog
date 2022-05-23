@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+@import "scrollbar-styles.css";
 :root{
     --font-family: 'Poppins', sans-serif;
 /*Sizes*/
@@ -16,15 +16,9 @@
     --footer-font-size: 1rem;
     --breaking-news-block-fontSize: 0.9rem;
 }
-
-*{
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 html{
     font-size: 1em;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 body{
     font-family: var(--font-family);
@@ -38,8 +32,6 @@ hr{
 }
 a{
     color: var(--_main-color);
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-decoration: none;
     cursor: pointer;
 }
@@ -269,6 +261,7 @@ header{
 .article-photo{
     width: 34vw;
     height: 14.85rem;
+    overflow: hidden;
     grid-column: 1/2;
     border: 1px solid var(--_trending-photo-border-color);
     border-bottom: none;
@@ -313,7 +306,7 @@ header{
     width: 100%;
 }
 .article:nth-child(3) .article-photo{
-    width: 100%;
+    /*width: 100%;*/
 }
 .article-description-block{
     margin: 0;
@@ -368,6 +361,7 @@ header{
 .trending-new-photo{
     width: 6.125rem;
     height: 6.125rem;
+    overflow: hidden;
     border: 1px solid var(--_trending-photo-border-color);
 }
 .trending-news-heading{
@@ -426,6 +420,7 @@ header{
 .quick-article{
     display: inline-block;
     margin: 0.63rem;
+    overflow: hidden;
 }
 .quick-article .article-photo{
     width: 31.19vw;
@@ -497,6 +492,7 @@ header{
 .older-post-photo-container{
     width: 36.459rem;
     height: 12.44rem;
+    overflow: hidden;
     border: 1px solid var(--_trending-photo-border-color);
 }
 .older-post-description .description-text{
@@ -564,14 +560,17 @@ header{
     width: 31.381vw;
     height: 12.242rem;
 }
+
 .popular-tag:hover .tag-text{
     color: var(--_popular-tag-hovered-color);
 }
 .popular-tag:hover .popular-tag-image{
     transform: scale(1.05);
+    backdrop-filter: blur(100px);
 }
 .popular-tag:hover{
     border: none;
+    backdrop-filter: blur(100px);
 }
 /*------Newsletter section------*/
 .newsletter-block-header::after{
