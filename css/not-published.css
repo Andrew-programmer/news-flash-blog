@@ -33,3 +33,9 @@
         padding: 0.3rem 1.6rem;
     }
 }
+
+@media screen and (max-width: 375px){
+    html{
+        font-size: 3.5vw !important;
+    }
+}
