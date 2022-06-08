@@ -13,37 +13,37 @@
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/account.css">
 	<script src="js/account.js"></script>
-	<script type="text/javascript">
-        (function () {
-            // Выполняем    код только на мобильных браузерах (на всякий случай)
-            if (typeof (window.orientation) !== 'undefined') {
-                // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
-                function getDeviceWidth() {
-                    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-                    // iOS returns available pixels, Android returns pixels / pixel ratio
-                    // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
-                    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-                        deviceWidth = deviceWidth / window.devicePixelRatio;
+<!--	<script type="text/javascript">-->
+<!--        (function () {-->
+<!--            // Выполняем    код только на мобильных браузерах (на всякий случай)-->
+<!--            if (typeof (window.orientation) !== 'undefined') {-->
+<!--                // Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript-->
+<!--                function getDeviceWidth() {-->
+<!--                    var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;-->
+<!--                    // iOS returns available pixels, Android returns pixels / pixel ratio-->
+<!--                    // http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html-->
+<!--                    if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)-->
+<!--                        deviceWidth = deviceWidth / window.devicePixelRatio;-->
 
-                    return deviceWidth;
-                }
+<!--                    return deviceWidth;-->
+<!--                }-->
 
-                var deviceWidth = getDeviceWidth();
-                var maxWidth = 900;
+<!--                var deviceWidth = getDeviceWidth();-->
+<!--                var maxWidth = 900;-->
 
-                if (deviceWidth < maxWidth) {
-                    // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины
-                    // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в
-                    // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
-                    if (window.orientation == 0 || window.orientation == 180)
-                        document.write('<meta name="viewport" content="width=device-width">');
-                    else
-                        document.write('<meta name="viewport" content="width=device-height">');
-                } else
-                    document.write('<meta name="viewport" content="width=' + maxWidth + '">');
-            }
-        })();
-	</script>
+<!--                if (deviceWidth < maxWidth) {-->
+<!--                    // Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины-->
+<!--                    // экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в-->
+<!--                    // альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.-->
+<!--                    if (window.orientation == 0 || window.orientation == 180)-->
+<!--                        document.write('<meta name="viewport" content="width=device-width">');-->
+<!--                    else-->
+<!--                        document.write('<meta name="viewport" content="width=device-height">');-->
+<!--                } else-->
+<!--                    document.write('<meta name="viewport" content="width=' + maxWidth + '">');-->
+<!--            }-->
+<!--        })();-->
+<!--	</script>-->
 </head>
 <body>
 <header>
@@ -57,15 +57,17 @@
 <section class="main-container">
 	<aside class="page-manipulation-container">
 		<div class="page-manipulation-block">
-			<figure class="account-block">
-				<i class="ri-account-circle-line img account-img"></i>
-				<figcaption class="account-nickname">
-					Nickname
-				</figcaption>
-			</figure>
+			<a href="/profile" onclick="$('#mydiv').load('profile.html'); return false">
+				<figure class="account-block">
+					<i class="ri-account-circle-line img account-img"></i>
+					<figcaption class="account-nickname">
+						Nickname
+					</figcaption>
+				</figure>
+			</a>
 			<nav class="page-manipulation-menu">
 				<i class="ri-file-edit-line new-article-img img"></i>
-				<a href="#" onclick="$('#mydiv').load('new-article.html'); return false" class="manipulation create-article">New Article</a>
+				<a href="/new-article" onclick="$('#mydiv').load('new-article.html'); return false" class="manipulation create-article">New Article</a>
 				<br>
 				<i class="ri-file-copy-2-line not-published-img img"></i>
 				<a href="#" onclick="$('#mydiv').load('not-published.html'); $(body).append('<script src=js/not-published.js></script>'); return false" class="manipulation show-not-published">Not published <sup class="not-published-count">2</sup></a>
