@@ -8,40 +8,10 @@
 	<script src="js/variables.js"></script>
 	<script src="js/theme.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/showAccountIcoOrNo.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/scrollbar-styles.css">
-	<!-- <script type="text/javascript">
-	(function () {
-	// Выполняем    код только на мобильных браузерах (на всякий случай)
-	if (typeof (window.orientation) !== 'undefined') {
-	// Функция взята отсюда: https://makandracards.com/makandra/13743-detect-effective-horizontal-pixel-width-on-a-mobile-device-with-javascript
-	function getDeviceWidth() {
-	var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
-	// iOS returns available pixels, Android returns pixels / pixel ratio
-	// http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html
-	if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
-	deviceWidth = deviceWidth / window.devicePixelRatio;
-
-	return deviceWidth;
-	}
-
-	var deviceWidth = getDeviceWidth();
-	var maxWidth = 900;
-
-	if (deviceWidth < maxWidth) {
-	// Мои эксперименты на iPad 2 показали, что device-width всегда содержит значение ширины
-	// экрана в книжной (portrait) ориентации (т.е. даже, если устройство находится в
-	// альбомной (landscape) ориентации). Это же утверждалось в некоторых найденных мною статьях.
-	if (window.orientation == 0 || window.orientation == 180)
-	document.write('<meta name="viewport" content="width=device-width">');
-	else
-	document.write('<meta name="viewport" content="width=device-height">');
-	} else
-	document.write('<meta name="viewport" content="width=' + maxWidth + '">');
-	}
-	})();
-	</script> -->
 </head>
 <body>
 <header>
@@ -61,8 +31,16 @@
 		<button class="search-button button">
 			<i class="ri-search-line button-img"></i>
 		</button>
-		<a href="account.html">
-			<i class="ri-user-line account-link  button-img"></i>
+		<a href="sign-in-page.html" class="user-button shown user-action">
+			<span class="sign-in-link">Sign in</span>
+		</a>
+		<a href="sign-up-page.html" class="user-button shown user-action">
+			<div class="sign-up-button-container">
+				<button class="sign-up-button" type="button">Sign up</button>
+			</div>
+		</a>
+		<a href="account.html" class="user-account hidden user-action">
+			<i class="ri-user-line account-link button-img"></i>
 		</a>
 		<!--Mobile Version-->
 		<i class="ri-menu-3-line open-menu button-img"></i>
@@ -71,8 +49,8 @@
 <!--Search field-->
 <div class="search-field-block non-active">
 	<div class="email-input-container search-field-container">
-		<input type="email" class="mail-input search-input" placeholder="What are you looking for?">
-		<button type="submit" class="send-mail-button input-button">
+		<input type="email" class="input search-input" placeholder="What are you looking for?">
+		<button type="submit" class="input-button">
 			<i class="ri-search-line input-button-image"></i>
 		</button>
 	</div>
@@ -119,7 +97,7 @@
 			<article class="article">
 				<a href="page.html" class="link">
 					<figure class="article-description-block">
-						<div class="article-photo">
+						<div class="article-photo" id="3-photo">
 							<img alt="Article Photo" src="https://picsum.photos/800/400?random=2">
 						</div>
 						<figcaption class="article-text description-text">
@@ -416,8 +394,8 @@
 		<span class="form-description">Lorem ipsum dolor sit amet consectetur adipisicing quaerat dignissimos.</span>
 		<br>
 		<div class="email-input-container">
-			<input type="email" class="mail-input" placeholder="Enter your email address">
-			<button type="button" class="send-mail-button input-button">
+			<input type="email" class="mail-input input" placeholder="Enter your email address" pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$">
+			<button type="submit" class="send-mail-button input-button">
 				<i class="ri-mail-send-line input-button-image"></i>
 			</button>
 		</div>

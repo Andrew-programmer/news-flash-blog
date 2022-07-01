@@ -31,7 +31,6 @@ $(function (){
     $changeThemeButton.click(() => changeTheme());
 
 
-
     $searchButton.click(function () {
         showSearchField($searchField);
     });
@@ -40,9 +39,11 @@ $(function (){
         showSearchField($searchField);
     });
 
-    $inputSearchButton.click(function (){
-        $input.val('');
-    });
+
+    function isMailValid(value, pattern) {
+        return pattern.test(value);
+    }
+
     $menuButton.click(function (){
         let currentDisplayStatus = $headerNav.css('display') === 'none'? 'flex': 'none';
         $menuButton.toggleClass('ri-close-line ri-menu-3-line');

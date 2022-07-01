@@ -1,7 +1,4 @@
 $(function () {
-    // $(".show-not-published").click(() => {
-    //     $('body').append(`<script src="js/not-published.js"></script>`);
-    // });
     $article.click((event) => {
         debugger
         event.preventDefault();
@@ -17,4 +14,9 @@ $(function () {
             $('.ask-form').css('display', 'flex');
         }
     });
+
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    $accountNickName.text(user.username);
+
 })

@@ -17,7 +17,7 @@
     --breaking-news-block-fontSize: 0.9rem;
 }
 *{
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;.article:nth-child(3) .article-photo
 }
 html{
     font-size: 1em;
@@ -38,13 +38,16 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
+abbr{
+   text-decoration: none;
+}
 .link{
     width: 100%;
 }
-.section-header::after, .mail-input, .social-container-description , .copyright{
+.section-header::after, .input, .social-container-description , .copyright{
     transition: 0.15s ease;
 }
-a, .news-block, .trending-news-block, .see-more-button, .email-input-container, .send-mail-button, .ri-mail-send-line, .footer-header{
+a, .news-block, .trending-news-block, .see-more-button, .email-input-container, .input-button, .ri-mail-send-line, .footer-header{
     transition: 0.2s ease;
 }
 .button-img, .section-header, .social-icon, .header-link, .sign-in-link, .sign-up-button{
@@ -153,6 +156,15 @@ header{
 .sign-up-button, header{
     font-size: var(--header-font-size);
 }
+
+.shown{
+    display: inline-block;
+}
+
+.hidden{
+    display: none;
+}
+
 .header-logo{
     font-size: 1.42rem;
 }
@@ -309,7 +321,7 @@ header{
     width: 100%;
 }
 .article:nth-child(3) .article-photo{
-    /*width: 100%;*/
+    width: auto;
 }
 .article-description-block{
     margin: 0;
@@ -603,7 +615,7 @@ header{
     display: inline-block;
     margin-bottom: 0.8rem;
 }
-.mail-input{
+.input{
     width: 13.84rem;
     height: 3.16rem;
     padding-left: 1rem;
@@ -611,26 +623,26 @@ header{
     background-color: var(--_mail-input-background);
     font-size: 1rem;
 }
-.mail-input:focus-visible{
+.input:focus-visible{
     outline: none;
 }
-.send-mail-button{
+.input-button{
     width: 4.27rem;
     height: 3.33rem;
     background-color: var(--_header-background-light);
 }
-.send-mail-button, .mail-input{
+.input-button, .input{
     border: none;
 }
-.mail-input::placeholder{
+.input::placeholder{
     opacity: 0.7;
     position: relative;
     font-size: var(--mail-input-placeholder-size);
 }
-.send-mail-button:hover .input-button-image{
+.input-button:hover .input-button-image{
     opacity: 1;
 }
-.send-mail-button{
+.input-button{
     cursor: pointer;
 }
 .input-button-image{
@@ -712,6 +724,9 @@ footer ul li{
     }
     .article:nth-child(3){
         grid-column: 2;
+    }
+    .article:nth-child(3) .article-photo{
+        width: 34vw;
     }
 }
 @media screen and (max-width: 1023px){
@@ -1006,7 +1021,7 @@ footer ul li{
     .form-description {
         width: 100%;
     }
-    .mail-input {
+    .input {
         width: 79vw;
     }
 }
