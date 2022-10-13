@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="951907f8-fc90-45bb-b857-4b8a88eee48e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CkcqBOHevkpw9xxrBoX0LVCN1B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/andre/OneDrive/Документы/My Projects/NewsBlog",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OneDrive\Документы\My Projects\NewsBlog\NewsFlashBlog\js\components-logic\authorPage" />
+      <recent name="C:\Users\andre\OneDrive\Документы\My Projects\NewsBlog\server\routes" />
+      <recent name="C:\Users\andre\OneDrive\Документы\My Projects\NewsBlog\server\controllers" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="951907f8-fc90-45bb-b857-4b8a88eee48e" name="Changes" comment="" />
+      <created>1659350211924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659350211924</updated>
+      <workItem from="1659350213096" duration="25000" />
+      <workItem from="1660441419303" duration="121000" />
+      <workItem from="1660678033322" duration="7916000" />
+      <workItem from="1660999891175" duration="156000" />
+      <workItem from="1664055558413" duration="130000" />
+      <workItem from="1664120286333" duration="20000" />
+      <workItem from="1664556296802" duration="9261000" />
+      <workItem from="1664641329392" duration="41571000" />
+      <workItem from="1665074597685" duration="933000" />
+      <workItem from="1665076076703" duration="1420000" />
+      <workItem from="1665077788973" duration="1436000" />
+      <workItem from="1665079980757" duration="9711000" />
+      <workItem from="1665162911239" duration="19147000" />
+      <workItem from="1665342521084" duration="19000" />
+      <workItem from="1665349014791" duration="7558000" />
+      <workItem from="1665410074191" duration="156000" />
+      <workItem from="1665430493382" duration="21000" />
+      <workItem from="1665616957433" duration="10649000" />
+      <workItem from="1665630988847" duration="1036000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

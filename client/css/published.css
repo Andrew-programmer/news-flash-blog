@@ -1,0 +1,20 @@
+.stats-block{
+    display: flex;
+    width: 6rem;
+    justify-content: space-around;
+}
+
+.stat-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat{
+    font-size: 1rem;
+    margin: 0 0 0 0.4rem;
+}
+
+.read-icon{
+    font-size: 1.3rem;
+}

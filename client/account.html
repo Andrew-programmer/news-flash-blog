@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NewsFlash|Account</title>
+    <script defer src="js/classes.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_fileinput.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script defer src="js/functions.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/changeIconsTheme.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="css/sign-up-page.css">-->
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/subscriptions.css">
+    <script defer src="js/other-variables/account-variables.js"></script>
+    <script defer src="js/components-logic/loadCount.js"></script>
+    <script defer src="js/account.js"></script>
+    <script type="module"
+            src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/components/avatar/avatar.js"></script>
+    <script>
+        $(function () {
+            $('#mydiv').load('profile.html')
+        })
+    </script>
+</head>
+<body>
+<header>
+    <h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+    <div class="email-input-container search-field-container">
+        <input type="email" class="input search-input" placeholder="What are you looking for?">
+        <button type="submit" class="input-button search">
+            <i class="ri-search-line input-button-image"></i>
+        </button>
+    </div>
+    <div class="buttons-container">
+        <button class="change-theme-button button" id="change-theme">
+            <i class="ri-moon-line button-img" id="theme-icon"></i>
+        </button>
+    </div>
+</header>
+<section class="main-container">
+    <aside class="page-manipulation-container">
+        <div class="page-manipulation-block">
+            <a onclick="$('#mydiv').load('profile.html'); return false" class="profile">
+                <figure class="account-block">
+                    <sl-avatar label="User avatar" class="img avatar" shape="circle"></sl-avatar>
+                    <figcaption class="account-nickname">
+                        <!--						Nickname-->
+                    </figcaption>
+                </figure>
+            </a>
+            <nav class="page-manipulation-menu">
+                <i class="ri-file-edit-line new-article-img img"></i>
+                <a onclick="$('#mydiv').load('new-article.html'); return false" class="manipulation create-article">New
+                    Article</a>
+                <br>
+                <i class="ri-file-copy-2-line not-published-img img"></i>
+                <a href="#" onclick="$('#mydiv').load('not-published.html'); return false"
+                   class="manipulation show-not-published">Not published <sup class="not-published-count"></sup></a>
+                <br>
+                <i class="ri-task-line published-img img"></i>
+                <a href="#" onclick="$('#mydiv').load('published.html'); return false"
+                   class="manipulation show-published">Published <sup class="published-count"></sup></a>
+                <br>
+                <i class="ri-star-line fav-img img"></i>
+                <a href="#" onclick="$('#mydiv').load('favourite.html'); return false" class="manipulation show-fav">Favourite
+                    <sup class="favourite-count"></sup></a>
+                <br>
+                <i class="ri-group-2-line img"></i>
+                <a href="#" onclick="$('#mydiv').load('subscriptions.html'); return false"
+                   class="manipulation show-fav">Subscriptions
+                    <sup class="subscriptions-count"></sup></a>
+
+            </nav>
+        </div>
+    </aside>
+
+    <div class="content" id="mydiv">
+        <!--Тут будет грузиться нужный контент-->
+    </div>
+</section>
+
+
+</body>
+</html>

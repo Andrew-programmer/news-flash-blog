@@ -1,0 +1,20 @@
+.sign-up-form {
+    display: initial;
+    width: 18rem;
+}
+
+
+.register-button {
+    left: 36%;
+}
+
+@media screen and (max-width: 900px){
+    .sign-up-form{
+        display: initial;
+    }
+    .register-button{
+        margin: 0;
+    }
+}
+
+

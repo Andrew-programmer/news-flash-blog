@@ -1,0 +1,73 @@
+
+.subscriptions-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.subscription-block{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.subscription-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .subscription-photo-container{
+    height: 10rem;
+    border: 1px solid var(--_input-border)
+}
+
+.content .subscription-description{
+    padding: 1rem;
+    background-color: var(--_header-background-light);
+    transition: all 0.2s;
+}
+
+.subscription-links{
+    padding: 0;
+    margin: 0;
+}
+
+.subscription-prop{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.subscription-block:hover .subscription-description {
+    background-color: var(--_article-hovered-background);
+    cursor: pointer;
+    padding-bottom: 2rem;
+}
+
+.subscription-block:hover .change-color-prop {
+    color: var(--_main-hovered-color);
+}
+
+.search-container::after{
+    content: '';
+}
+
+
+.subscriptions-container .search-input, .subscriptions-container .search-field-container{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .subscriptions-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .subscriptions-container {
+        grid-template-columns: 1fr;
+    }
+}

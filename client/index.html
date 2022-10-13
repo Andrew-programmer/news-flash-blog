@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth" class="visible-scroll">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<title>NewsFlash|Home</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/variables.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="js/components-logic/loadCount.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/classes.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/components-logic/menu/menu.js"></script>
+	<script src="js/changeIconsTheme.js"></script>
+	<script src="js/showAccountIcoOrNo.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/searchMain.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/scrollbar-styles.css">
+	<link rel="stylesheet" href="css/search-results-block.css">
+</head>
+<body>
+<div class="spinner-container">
+	<div class="sk-cube-grid">
+		<div class="sk-cube sk-cube1"></div>
+		<div class="sk-cube sk-cube2"></div>
+		<div class="sk-cube sk-cube3"></div>
+		<div class="sk-cube sk-cube4"></div>
+		<div class="sk-cube sk-cube5"></div>
+		<div class="sk-cube sk-cube6"></div>
+		<div class="sk-cube sk-cube7"></div>
+		<div class="sk-cube sk-cube8"></div>
+		<div class="sk-cube sk-cube9"></div>
+	</div>
+</div>
+
+<header>
+	<h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+	<nav class="header-navigation">
+		<a class="header-link active-link" href="index.html">Home</a>
+		<a class="header-link" href="#">Categories</a>
+		<a class="header-link" href="#">Reviews</a>
+		<a class="header-link" href="#">News</a>
+		<a class="header-link" href="#">Membership</a>
+		<a class="header-link" href="#contact-link">Contact</a>
+	</nav>
+	<div class="buttons-container">
+		<button class="change-theme-button button" id="change-theme">
+			<i class="ri-moon-line button-img" id="theme-icon"></i>
+		</button>
+		<button class="search-button button open-search-button">
+			<i class="ri-search-line button-img"></i>
+		</button>
+		<a href="sign-in-page.html" class="user-button shown user-action">
+			<span class="sign-in-link">Sign in</span>
+		</a>
+		<a href="sign-up-page.html" class="user-button shown user-action">
+			<div class="sign-up-button-container">
+				<button class="sign-up-button" type="button">Sign up</button>
+			</div>
+		</a>
+		<a href="account.html" class="user-account button hidden user-action">
+			<i class="ri-user-line account-link button-img"></i>
+		</a>
+		<!--Mobile Version-->
+		<i class="ri-menu-3-line open-menu button button-img"></i>
+	</div>
+</header>
+<!--Search field-->
+<div class="search-field-block non-active">
+	<div class="close-search-button-container">
+		<button class="close-search-button">
+			<i class="ri-close-line close-image-icon"></i>
+		</button>
+	</div>
+	<div class="search-container">
+		<div class="email-input-container search-field-container">
+			<input type="text" class="input search-input" placeholder="What are you looking for?">
+			<button type="submit" class="input-button search">
+				<i class="ri-search-line input-button-image"></i>
+			</button>
+		</div>
+	</div>
+	<div class="spinner-container search-loader">
+		<div class="sk-cube-grid">
+			<div class="sk-cube sk-cube1"></div>
+			<div class="sk-cube sk-cube2"></div>
+			<div class="sk-cube sk-cube3"></div>
+			<div class="sk-cube sk-cube4"></div>
+			<div class="sk-cube sk-cube5"></div>
+			<div class="sk-cube sk-cube6"></div>
+			<div class="sk-cube sk-cube7"></div>
+			<div class="sk-cube sk-cube8"></div>
+			<div class="sk-cube sk-cube9"></div>
+		</div>
+	</div>
+	<div class="results-block">
+
+	</div>
+</div>
+<!---------------->
+<section class="main-section">
+	<div class="news-articles-container">
+		<aside class="news-block">
+			<div class="news-banner">BREAKING NEWS</div>
+			<span class="news-text">Apple announces a new partnership...</span>
+		</aside>
+		<div class="articles-block">
+<!--			Articles-->
+		</div>
+	</div>
+	<aside class="trending-news-block">
+		<h3 class="trending-news-heading">Trending news</h3>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="https://picsum.photos/550/200?random=1">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="https://picsum.photos/550/200?random=2">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="https://picsum.photos/550/200?random=3">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="https://picsum.photos/550/200?random=4">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+		<hr>
+		<article class="trending-new">
+			<fugire class="trending-new-description">
+				<div class="trending-new-photo">
+					<img alt="New's Photo" src="https://picsum.photos/550/200?random=5">
+				</div>
+				<figcaption class="trending-new-text description-text">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h5 class="article-title trending-title">Sample article title</h5>
+				</figcaption>
+			</fugire>
+		</article>
+	</aside>
+</section>
+
+<section class="quick-read-block">
+	<h1 class="quick-read-block-header section-header">Quick read</h1>
+	<div class="list-buttons-container">
+		<button class="previous-button list-button"><i class="ri-arrow-right-s-line previous-post-button"></i>
+		</button>
+		<button class="next-button list-button"><i class="ri-arrow-right-s-line next-post-button"></i></button>
+	</div>
+	<div class="quick-articles-container">
+		<ul class="quick-read-articles">
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=1">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=2">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=3">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=4">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=5">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+			<li class="quick-article">
+				<article class="article">
+					<figure class="article-description-block">
+						<div class="article-photo">
+							<img alt="Article Photo" src="https://picsum.photos/800/400?random=6">
+						</div>
+						<figcaption class="article-text description-text">
+							<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+							<h5 class="article-title">Is VR the future</h5>
+						</figcaption>
+					</figure>
+				</article>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="older-posts-block">
+	<h1 class="older-post-block-header section-header">Older posts</h1>
+	<div class="older-posts-container">
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=6">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=7">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=8">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=9">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=10">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+		<article class="older-post-block">
+			<figure class="older-post">
+				<div class="older-post-photo-container">
+					<img alt="" class="older-post-photo" src="https://picsum.photos/550/200?random=11">
+				</div>
+				<figcaption class="older-post-description">
+					<span class="time">Dec 6th 2021 &#160;&#160;&#160;<span>&#11045;</span>&#160;&#160;&#160; 4 Min read</span>
+					<h2 class="older-post-header">Sample article title</h2>
+					<p class="description-text old-post-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Similique a
+						tempore sapiente corporis, eaque fuga placeat odit volaptatibus.</p>
+				</figcaption>
+			</figure>
+		</article>
+	</div>
+	<div class="see-more-button">
+		<a class="see-more-link">SEE MORE</a><i class="ri-arrow-right-s-line"></i>
+	</div>
+</section>
+
+<section class="popular-tags-block">
+	<h1 class="popular-tags-block-header section-header">Popular tags</h1>
+	<div class="popular-tags-container">
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/177/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Travel</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/1080/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Food</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/119/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Technology</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/292/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Health</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/1074/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Nature</span>
+		</a>
+		<a href="#" class="popular-tag">
+			<img src="https://picsum.photos/id/203/550/200" alt="" class="popular-tag-image">
+			<span class="tag-text">#Fitness</span>
+		</a>
+	</div>
+</section>
+
+<section class="newsletter-block">
+	<h1 class="newsletter-block-header section-header">Newsletter</h1>
+	<form action="#" class="subscribe-from">
+		<h2 class="form-header">Subscribe to NewsFlash</h2>
+		<span class="form-description">Write your gmail to have fun with <strong>NewsFlash</strong> every day.</span>
+		<br>
+		<div class="email-input-container">
+			<input type="email" class="mail-input input" placeholder="Enter your email address" pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$">
+			<button type="submit" class="send-mail-button input-button">
+				<i class="ri-mail-send-line input-button-image"></i>
+			</button>
+		</div>
+	</form>
+</section>
+
+<footer>
+	<div class="social-container">
+		<h2 class="social-container-header footer-header"><a href="#">NewsFlash</a></h2>
+		<p class="social-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Facere, iure. Harum, animi dolores, nam, ad magni expedita.</p>
+		<ul class="social-media-list">
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-instagram-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-facebook-circle-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-twitter-line"></i>
+				</a>
+			</li>
+			<li class="social-icon-container">
+				<a href="#">
+					<i class="social-icon ri-pinterest-line"></i>
+				</a>
+			</li>
+		</ul>
+		<span class="copyright">©2021 NewsFlash. All rights reserved.</span>
+	</div>
+	<div class="categories-block">
+		<h3 class="categories-block-header footer-header">CATEGORIES</h3>
+		<ul class="category-list">
+			<li class="category"><a href="#" class="footer-link">Travel</a></li>
+			<li class="category"><a href="#" class="footer-link">Food</a></li>
+			<li class="category"><a href="#" class="footer-link">Technology</a></li>
+			<li class="category"><a href="#" class="footer-link">Health</a></li>
+			<li class="category"><a href="#" class="footer-link">Nature</a></li>
+			<li class="category"><a href="#" class="footer-link">Fitness</a></li>
+		</ul>
+	</div>
+	<div class="useful-links-block">
+		<h3 class="useful-links-block-header footer-header">USEFUL LINKS</h3>
+		<ul class="useful-link-list">
+			<li class="useful-link"><a href="#" class="footer-link">Home</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Elements</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Tags</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Authors</a></li>
+			<li class="useful-link"><a href="#" class="footer-link">Membership</a></li>
+		</ul>
+	</div>
+	<div class="company-block">
+		<h3 class="company-block-header footer-header">COMPANY</h3>
+		<ul class="chapter-list">
+			<li class="chapter"><a href="#" class="footer-link" id="contact-link">Contact us</a></li>
+			<li class="chapter"><a href="#" class="footer-link">F.A.Q</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Careers</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Authors</a></li>
+			<li class="chapter"><a href="#" class="footer-link">Memberships</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="js/functions.js"></script>
+<script src="js/components-logic/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NewsFlash|Account</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_fileinput.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/theme.js"></script>
+    <script defer src="js/classes.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/changeIconsTheme.js"></script>
+    <script defer src="js/components-logic/loadCount.js"></script>
+    <script defer src="js/components-logic/loadAuthorInfo.js"></script>
+    <script defer src="js/components-logic/authorPage/authorSubscribe.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/author.css">
+</head>
+<body>
+<div class="spinner-container">
+    <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+<header>
+    <h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+    <div class="buttons-container">
+        <button class="change-theme-button button" id="change-theme">
+            <i class="ri-moon-line button-img" id="theme-icon"></i>
+        </button>
+    </div>
+</header>
+<section class="main-container">
+
+    <main class="profile-main-section">
+        <section class="profile-container">
+            <figure class="profile-photo-container">
+                <div class="image-container" data-type="image">
+                    <!--				Photo-->
+                </div>
+                <figcaption class="profile-stats">
+                    <div class="money-stat-container stat-container">
+                        <i class="ri-team-line stat"></i>
+                        <span class="stat-text subscribers">1</span>
+                    </div>
+                    <div class="views-stat-container stat-container">
+                        <i class="ri-eye-line views-stat stat"></i>
+                        <span class="stat-text views">1</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <section class="profile-info">
+                <h3 class="username-field">Username</h3>
+                <h3 class="total-articles-filed">Total articles: <span class="total-articles">20</span></h3>
+                <div class="mail-container">
+                    <i class="ri-mail-line info-stat"></i><span class="mail-link"></span>
+                </div>
+                <ul class="profile-links-container">
+                    <!--Links-->
+                </ul>
+                <a href="#" class="user-button shown user-action subscribe-button-container">
+                    <div class="sign-up-button-container">
+                        <button class="sign-up-button subscribe-button" type="submit" data-type="subscribe">Subscribe</button>
+                    </div>
+                </a>
+            </section>
+            <div class="about-author-block author-description-block">description</div>
+        </section>
+        <div id="hr"></div>
+        <section class="all-articles-block">
+<!--            Search-->
+            <div class="search-container">
+                <div class="email-input-container search-field-container">
+                    <input type="email" class="input search-input" placeholder="What are you looking for?">
+                    <button type="submit" class="input-button search">
+                        <i class="ri-search-line input-button-image"></i>
+                    </button>
+                </div>
+            </div>
+<!--            -->
+            <h1>Other articles:</h1>
+            <div class="all-articles-container">
+                <!--                Articles-->
+
+            </div>
+        </section>
+    </main>
+
+
+</section>
+
+
+</body>
+</html>

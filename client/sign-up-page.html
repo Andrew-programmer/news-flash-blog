@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NewsFlash|Sign up</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery_fileinput.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/variables.js"></script>
+	<script src="js/theme.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/sign-up-page.css">
+	<link rel="stylesheet" href="css/scrollbar-styles.css">
+	<script src="js/classes.js"></script>
+</head>
+<body>
+<main class="main-section">
+	<p class="register-on-heading text">Register on</p>
+	<h2 class="logo text"><a href="index.html">NewsFlash</a></h2>
+	<form class="sign-up-form" id="newUserForm">
+		<div class="profile-info-container">
+			<!--Login-->
+			<label for="login" class="login-header form-header">Login:</label>
+			<div class="input-container">
+				<input type="text" name="username" id="login" minlength="4" required>
+			</div>
+			<!--Name-->
+			<label for="name" class="real-name-header form-header">Real Name:</label>
+			<div class="input-container">
+				<input type="text" name="name" id="name" required>
+			</div>
+			<!--Surname-->
+			<label for="surname" class="surname-header form-header">Real Surname:</label>
+			<div class="input-container">
+				<input type="text" name="surName" id="surname" required>
+			</div>
+			<!--Password-->
+			<label for="password" class="password-header form-header">Password:</label>
+			<div class="input-container">
+				<input type="password" name="password" id="password" required>
+				<i class="ri-eye-line password-button"></i>
+			</div>
+			<div class="password-rules-block">
+				<ul class="list-of-rules">
+					<li>
+						<span>Min. 1 number (0-9)</span>
+					</li>
+					<li>
+						<span>Min. 1 spec. character</span>
+					</li>
+					<li>
+						<span>Min. 1 upper case letter (A-<span title="Хуета ебаная">Z</span>)</span>
+					</li>
+					<li>
+						<span>Min. 1 lower case letter (a-<span title="Хуета ебаная">z</span>)</span>
+					</li>
+					<li>
+						<span>Min. 6 symbols</span>
+					</li>
+				</ul>
+			</div>
+			<!--Repeat password-->
+			<label for="repeat-password" class="repeat-password-header form-header">Repeat password:</label>
+			<div class="input-container">
+				<input type="password" id="repeat-password" required>
+				<i class="ri-eye-line password-button"></i>
+			</div>
+		</div>
+		<div class="profile-info-container profile-links-container">
+			<!--Gmail-->
+			<label for="gmail" class="gmail-header form-header">Gmail:</label>
+			<div class="input-container">
+				<input type="email" name="gmail" id="gmail" pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$" required>
+			</div>
+			<!--Instagramm-->
+			<label for="instagramm" class="instagramm-header form-header">Instagramm*:</label>
+			<div class="input-container">
+				<input type="text" id="instagramm">
+			</div>
+			<!--Facebook-->
+			<label for="facebook" class="facebook-header form-header">Facebook*:</label>
+			<div class="input-container">
+				<input type="text" id="facebook">
+			</div>
+			<!--Twitter-->
+			<label for="twitter" class="twitter-header form-header">Twitter*:</label>
+			<div class="input-container">
+				<input type="text" id="twitter">
+			</div>
+			<!--Pinterest-->
+			<label for="pinterest" class="pinterest-header form-header">Pinterest*:</label>
+			<div class="input-container">
+				<input type="text" id="pinterest">
+			</div>
+		</div>
+		<div class="profile-info-container profile-about-container">
+			<label for="description" class="about-author-header form-header">Tell us about you:</label>
+			<textarea name="description" id="description" class="article-description" cols="30" rows="10" minlength="25"></textarea>
+
+			<input type="file" name="photo" class="drag-and-drop-block" accept="image/*">
+		</div>
+		<button type="button" class="register-button">REGISTER</button>
+	</form>
+</main>
+<script src="js/variables.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/components-logic/drag_and_drop.logic.js"></script>
+<script src="js/sign-up-page.js"></script>
+</body>
+</html>

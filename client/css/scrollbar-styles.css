@@ -1,0 +1,14 @@
+::-webkit-scrollbar{
+    width: 0.66rem;
+}
+::-webkit-scrollbar-track{
+    transition: 0.1s ease;
+    background: var(--_scrollbar-track-color);
+}
+::-webkit-scrollbar-thumb{
+    transition: background-color 0.2s ease;
+    background-color: var(--_scrollbar-thumb-color);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--_scrollbar-thumb-hovered-color);
+}

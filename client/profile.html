@@ -1,0 +1,143 @@
+<div class="spinner-container">
+    <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+<main class="profile-main-section">
+<!--    Redact modal window-->
+    <form class="sign-up-form redact-form hidden" id="redactUserForm">
+        <div class="profile-info-container">
+            <!--Login-->
+            <label for="login" class="login-header form-header">Login:</label>
+            <div class="input-container">
+                <input type="text" name="username" id="login" minlength="4" required>
+            </div>
+            <!--Name-->
+            <label for="name" class="real-name-header form-header">Real Name:</label>
+            <div class="input-container">
+                <input type="text" name="name" id="name" required>
+            </div>
+            <!--Surname-->
+            <label for="surname" class="surname-header form-header">Real Surname:</label>
+            <div class="input-container">
+                <input type="text" name="surName" id="surname" required>
+            </div>
+            <!--Password-->
+            <label for="password" class="password-header form-header">Password:</label>
+            <div class="input-container">
+                <input type="password" name="password" id="password" required>
+                <i class="ri-eye-line password-button"></i>
+            </div>
+            <div class="password-rules-block">
+                <ul class="list-of-rules">
+                    <li>
+                        <span>Min. 1 number (0-9)</span>
+                    </li>
+                    <li>
+                        <span>Min. 1 spec. character</span>
+                    </li>
+                    <li>
+                        <span>Min. 1 upper case letter (A-<span title="Хуета ебаная">Z</span>)</span>
+                    </li>
+                    <li>
+                        <span>Min. 1 lower case letter (a-<span title="Хуета ебаная">z</span>)</span>
+                    </li>
+                    <li>
+                        <span>Min. 6 symbols</span>
+                    </li>
+                </ul>
+            </div>
+            <!--Repeat password-->
+            <label for="repeat-password" class="repeat-password-header form-header">Repeat password:</label>
+            <div class="input-container">
+                <input type="password" id="repeat-password" required>
+                <i class="ri-eye-line password-button"></i>
+            </div>
+        </div>
+        <div class="profile-info-container profile-links-container">
+            <!--Gmail-->
+            <label for="gmail" class="gmail-header form-header">Gmail:</label>
+            <div class="input-container">
+                <input type="email" name="gmail" id="gmail" pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$" required>
+            </div>
+            <!--Instagramm-->
+            <label for="instagramm" class="instagramm-header form-header">Instagramm*:</label>
+            <div class="input-container">
+                <input type="text" id="instagramm">
+            </div>
+            <!--Facebook-->
+            <label for="facebook" class="facebook-header form-header">Facebook*:</label>
+            <div class="input-container">
+                <input type="text" id="facebook">
+            </div>
+            <!--Twitter-->
+            <label for="twitter" class="twitter-header form-header">Twitter*:</label>
+            <div class="input-container">
+                <input type="text" id="twitter">
+            </div>
+            <!--Pinterest-->
+            <label for="pinterest" class="pinterest-header form-header">Pinterest*:</label>
+            <div class="input-container">
+                <input type="text" id="pinterest">
+            </div>
+        </div>
+        <div class="profile-info-container profile-about-container">
+            <label for="description" class="about-author-header form-header">Tell us about you:</label>
+            <textarea name="description" id="description" class="article-description" cols="30" rows="10" minlength="25"></textarea>
+
+            <input type="file" name="photo" class="drag-and-drop-block" accept="image/*">
+        </div>
+        <button type="submit" class="register-button">REGISTER</button>
+    </form>
+<!--    -->
+    <section class="profile-container">
+        <figure class="profile-photo-container">
+            <div class="image-container" data-type="image">
+                <!--				Photo-->
+            </div>
+            <figcaption class="profile-stats">
+                <div class="money-stat-container stat-container">
+                    <i class="ri-money-dollar-circle-line money-stat stat"></i>
+                    <span class="stat-text money"></span>
+                </div>
+                <div class="money-stat-container stat-container">
+                    <i class="ri-team-line stat"></i>
+                    <span class="stat-text subscribers"></span>
+                </div>
+                <div class="views-stat-container stat-container">
+                    <i class="ri-eye-line views-stat stat"></i>
+                    <span class="stat-text views"></span>
+                </div>
+            </figcaption>
+        </figure>
+        <section class="profile-info">
+            <h3 class="username-field">Username</h3>
+            <span>
+                <span class="real-name"></span>
+                <span class="real-surname"></span>
+            </span>
+            <h3 class="total-articles-filed">Total articles: <span class="total-articles">20</span></h3>
+            <div class="mail-container">
+                <i class="ri-mail-line info-stat"></i><span class="mail-link"></span>
+            </div>
+            <ul class="profile-links-container">
+                <!--Links-->
+            </ul>
+        </section>
+        <div class="about-author-block author-description-block">description</div>
+    </section>
+    <div class="profile-buttons-container">
+        <button class="exit-profile-button profile-button" type="button">EXIT</button>
+<!--        <button class="redact-profile-button profile-button" type="button">EDIT</button>-->
+    </div>
+    <script defer src="js/other-variables/profile-variables.js"></script>
+    <script defer src="js/components-logic/profile.js"></script>
+</main>

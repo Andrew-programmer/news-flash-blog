@@ -1,0 +1,36 @@
+<div class="spinner-container">
+    <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+<main class="main-form-container">
+    <form action="#" class="main-form" name="newArticle" id="addArticleForm">
+        <input type="text" name="title" placeholder="Your header" class="header-input mail-input form-elem"
+               maxlength="20">
+        <input type="file" name="photo" class="drag-and-drop-block select-photo" accept="image/*">
+        <textarea name="description" class="article-description form-elem" placeholder="Type text here..."></textarea>
+        <div class="done-and-select-container">
+            <select name="category" class="select-category form-elem">
+                <option value="Category" class="category-option" selected disabled>Category</option>
+                <option value="Travel" class="category-option">Travel</option>
+                <option value="Food" class="category-option">Food</option>
+                <option value="Technology" class="category-option">Technology</option>
+                <option value="Health" class="category-option">Health</option>
+                <option value="Nature" class="category-option">Nature</option>
+                <option value="Fitness" class="category-option">Fitness</option>
+            </select>
+            <button type="submit" class="form-elem submit-button">DONE</button>
+        </div>
+    </form>
+    <script defer src="js/other-variables/add-article-variables.js"></script>
+    <script defer src="js/components-logic/drag_and_drop.logic.js"></script>
+    <script defer src="js/components-logic/add-article.js"></script>
+</main>

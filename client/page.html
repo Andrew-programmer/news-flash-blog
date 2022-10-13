@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NewsFlash|Page</title>
+    <script defer src="js/jquery.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/classes.js"></script>
+    <script defer src="js/functions.js"></script>
+    <script defer src="js/changeIconsTheme.js"></script>
+    <script defer src="js/showAccountIcoOrNo.js"></script>
+    <script defer src="js/other-variables/add-article-variables.js"></script>
+    <script defer src="js/page.js"></script>
+    <script defer src="js/components-logic/articlePage/pageSubscribe.js"></script>
+    <script defer src="js/checkAuthor.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/scrollbar-styles.css">
+
+</head>
+<body>
+<div class="spinner-container">
+    <div class="sk-cube-grid">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+<!-------------Header--------------------------------------------->
+<header>
+    <h1 class="header-logo"><a href="index.html">NewsFlash</a></h1>
+    <nav class="header-navigation">
+        <a class="header-link" href="index.html">Home</a>
+        <a class="header-link" href="#">Categories</a>
+        <a class="header-link" href="#">Reviews</a>
+        <a class="header-link" href="#">News</a>
+        <a class="header-link" href="#">Membership</a>
+        <a class="header-link" href="#contact-link">Contact</a>
+    </nav>
+    <div class="buttons-container">
+        <button class="change-theme-button button" id="change-theme">
+            <i class="ri-moon-line button-img" id="theme-icon"></i>
+        </button>
+        <button class="search-button button">
+            <i class="ri-search-line button-img"></i>
+        </button>
+        <a href="sign-in-page.html" class="user-button shown user-action">
+            <span class="sign-in-link">Sign in</span>
+        </a>
+        <a href="sign-up-page.html" class="user-button shown user-action">
+            <div class="sign-up-button-container">
+                <button class="sign-up-button" type="button">Sign up</button>
+            </div>
+        </a>
+        <a href="account.html" class="user-account button hidden user-action">
+            <i class="ri-user-line account-link button-img"></i>
+        </a>
+        <!--Mobile Version-->
+        <i class="ri-menu-3-line open-menu button button-img"></i>
+    </div>
+</header>
+<!---------------------------------------------------------------->
+<div class="search-field-block non-active">
+    <div class="email-input-container search-field-container">
+        <input type="email" class="mail-input search-input" placeholder="What are you looking for?">
+        <button type="submit" class="send-mail-button input-button">
+            <i class="ri-search-line input-button-image"></i>
+        </button>
+    </div>
+    <div class="close-search-button-container">
+        <button class="close-search-button">
+            <i class="ri-close-line close-image-icon"></i>
+        </button>
+    </div>
+</div>
+<!--------------------------------------Main------------------------------------>
+<main data-state="">
+    <div class="page-header-container">
+        <h1 class="page-header text">
+            <!--            Is VR the future?-->
+        </h1>
+        <span class="time">
+            <span class="date">
+<!--            Dec 6th 2021-->
+            </span>
+            &#160;&#160;&#160;
+                &#11045;
+            &#160;&#160;&#160;
+            <span class="duration">
+    <!--            4 Min read-->
+            </span>
+            &#160;&#160;&#160;
+                &#11045;
+            &#160;&#160;&#160;
+            <span class="views">
+                view(s)
+            </span>
+        </span>
+    </div>
+    <div class="image-container">
+        <!--        <img src="#" alt="Article Photo" class="article-main-photo">-->
+    </div>
+    <div class="page-text-container">
+        <p class="page-text text">
+            <!--            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic-->
+            <!--            eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat-->
+            <!--            dolorum nulla vero.-->
+            <!--            Quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repellat consequatur culpa,-->
+            <!--            repudiandae aut dolores iusto.-->
+            <!--            Rem natus soluta, dolores, ad deleniti, aut dolorem corrupti quasi amet unde delectus hic?-->
+        </p>
+        <!--        <p class="page-text text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic-->
+        <!--            eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat-->
+        <!--            dolorum nulla vero.-->
+        <!--            Quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repellat consequatur culpa,-->
+        <!--            repudiandae aut dolores iusto.-->
+        <!--            Rem natus soluta, dolores, ad deleniti, aut dolorem corrupti quasi amet unde delectus hic?</p>-->
+        <!--        <blockquote class="text citate-block"><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia-->
+        <!--            voluptates, laboriosam voluptatum quos non consequuntur nesciunt necessitatibus tempora quod-->
+        <!--            inventore corporis rem nihil itaque, at provident minus aliquam veritatis. Labore?</q></blockquote>-->
+        <!--        <p class="page-text text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis eius possimus hic-->
+        <!--            eligendi distinctio rerum incidunt, esse quasi eum molestiae ducimus ipsam quae, aliquid ullam placeat-->
+        <!--            dolorum nulla vero.-->
+        <!--            Quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repellat consequatur culpa,-->
+        <!--            repudiandae aut dolores iusto.-->
+        <!--            Rem natus soluta, dolores, ad deleniti, aut dolorem corrupti quasi amet unde delectus hic?</p>-->
+        <article class="older-post-block author-block">
+            <figure class="older-post author" data-authorUsername="">
+                <div class="older-post-photo-container">
+
+                </div>
+                <figcaption class="older-post-description author-description">
+                    <div class="author-name-container">
+                        <h2 class="older-post-header author-name">
+                            <!--                    John Doe-->
+                        </h2>
+                        <i class="ri-user-add-line social-icon subscription-button subscribe" data-type="subscribe"></i>
+                        <i class="ri-user-unfollow-line social-icon subscription-button hidden unSubscribe" data-type="unSubscribe"></i>
+                    </div>
+
+                    <p class="description-text old-post-text">
+                        <!--                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.-->
+                        <!--                    Similique a-->
+                        <!--                    tempore sapiente corporis, eaque fuga placeat odit volaptatibus.-->
+                    </p>
+                    <ul class="social-media-list author-links">
+                        <!--                    <li class="social-icon-container">-->
+                        <!--                        <a href="#">-->
+                        <!--                            <i class="social-icon ri-instagram-line"></i>-->
+                        <!--                        </a>-->
+                        <!--                    </li>-->
+                        <!--                    <li class="social-icon-container">-->
+                        <!--                        <a href="#">-->
+                        <!--                            <i class="social-icon ri-facebook-circle-line"></i>-->
+                        <!--                        </a>-->
+                        <!--                    </li>-->
+                        <!--                    <li class="social-icon-container">-->
+                        <!--                        <a href="#">-->
+                        <!--                            <i class="social-icon ri-twitter-line"></i>-->
+                        <!--                        </a>-->
+                        <!--                    </li>-->
+                        <!--                    <li class="social-icon-container">-->
+                        <!--                        <a href="#">-->
+                        <!--                            <i class="social-icon ri-pinterest-line"></i>-->
+                        <!--                        </a>-->
+                        <!--                    </li>-->
+                    </ul>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
+
+</main>
+<!----------------------------------------------------------------------------------------------------------->
+
+<!----------------------------------------------------Footer------------------------------------------------------------------------------------>
+<footer>
+    <div class="social-container">
+        <h2 class="social-container-header footer-header"><a href="#">NewsFlash</a></h2>
+        <p class="social-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Facere, iure. Harum, animi dolores, nam, ad magni expedita.</p>
+        <ul class="social-media-list">
+            <li class="social-icon-container">
+                <a href="#">
+                    <i class="social-icon ri-instagram-line"></i>
+                </a>
+            </li>
+            <li class="social-icon-container">
+                <a href="#">
+                    <i class="social-icon ri-facebook-circle-line"></i>
+                </a>
+            </li>
+            <li class="social-icon-container">
+                <a href="#">
+                    <i class="social-icon ri-twitter-line"></i>
+                </a>
+            </li>
+            <li class="social-icon-container">
+                <a href="#">
+                    <i class="social-icon ri-pinterest-line"></i>
+                </a>
+            </li>
+        </ul>
+        <span class="copyright">©2021 NewsFlash. All rights reserved.</span>
+    </div>
+    <div class="categories-block">
+        <h3 class="categories-block-header footer-header">CATEGORIES</h3>
+        <ul class="category-list">
+            <li class="category"><a href="#" class="footer-link">Travel</a></li>
+            <li class="category"><a href="#" class="footer-link">Food</a></li>
+            <li class="category"><a href="#" class="footer-link">Technology</a></li>
+            <li class="category"><a href="#" class="footer-link">Health</a></li>
+            <li class="category"><a href="#" class="footer-link">Nature</a></li>
+            <li class="category"><a href="#" class="footer-link">Fitness</a></li>
+        </ul>
+    </div>
+    <div class="useful-links-block">
+        <h3 class="useful-links-block-header footer-header">USEFUL LINKS</h3>
+        <ul class="useful-link-list">
+            <li class="useful-link"><a href="#" class="footer-link">Home</a></li>
+            <li class="useful-link"><a href="#" class="footer-link">Elements</a></li>
+            <li class="useful-link"><a href="#" class="footer-link">Tags</a></li>
+            <li class="useful-link"><a href="#" class="footer-link">Authors</a></li>
+            <li class="useful-link"><a href="#" class="footer-link">Membership</a></li>
+        </ul>
+    </div>
+    <div class="company-block">
+        <h3 class="company-block-header footer-header">COMPANY</h3>
+        <ul class="chapter-list">
+            <li class="chapter"><a href="#" class="footer-link">Contact us</a></li>
+            <li class="chapter"><a href="#" class="footer-link">F.A.Q</a></li>
+            <li class="chapter"><a href="#" class="footer-link">Careers</a></li>
+            <li class="chapter"><a href="#" class="footer-link">Authors</a></li>
+            <li class="chapter"><a href="#" class="footer-link">Memberships</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+:root {
+    --_header-background-light: #252830;
+    --_main-color: white;
+    --_main-hovered-color: white;
+    --_sign-up-background: #252830;
+    --_article-background: black;
+    --_article-hovered-background: #131417;
+    --_header-active-link-color: white;
+    --_header-regular-link-color: #afb6cd;
+    --_header-hovered-link-color: white;
+    --_trending-photo-border-color: rgba(192, 192, 192, 0.6);
+    --_text-shadow-color: rgba(255, 255, 255, 0.1);
+    --_older-post-text-color: white;
+    --_older-post-background: #131417;
+    --_popular-tag-color: rgba(255, 255, 255, 0.55);
+    --_popular-tag-background: black;
+    --_popular-tag-hovered-color: rgb(255, 255, 255);
+    --_mail-input-text-color: #afb6cd;
+    --_button-icon-color: white;
+    --_mail-input-background: #131417;
+    --_search-field-background: #131417;
+    --_press-esc-line: white;
+    --_close-button-border: #252830;
+
+    --_scrollbar-thumb-color: #3f4254;
+    --_scrollbar-thumb-hovered-color: #30323f;
+    --_scrollbar-track-color: #28292d;
+
+    --_sign-up-form-background: rgba(0, 0, 0, 0.8);
+    --_sign-up-body-background: linear-gradient(-45deg, #1e0000, #32170e, #150012, #01004f);
+    --_sign-up-button-border: #f1f1f1;
+    --_sign-up-button-background: black;
+
+    --_account-block-background: rgb(29 31 38);
+
+    --_body-background: #131417;
+
+    --_input-focus-outline: #3e414a;
+    --_drag-and-drop-background: rgba(192, 192, 192, 0.07);
+    --_submit-button-background: rgba(192, 192, 192, 0.07);
+    --_input-border: #252830;
+    --_hovered-input-border: #333842;
+}

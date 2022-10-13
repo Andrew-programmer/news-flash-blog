@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+main{
+    display: flex;
+    margin: 3.9rem 1rem;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.page-header{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+.text{
+    color: var(--_main-color);
+}
+.text:not(h1){
+    opacity: 0.7;
+}
+.author-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.author .older-post-photo-container{
+    width: 12rem;
+    background-size: cover;
+}
+.author .older-post-description{
+    min-width: 14rem;
+}
+
+.author.older-post{
+    width: initial;
+}
+
+.older-post-header{
+    transition: 0.2s ease;
+}
+.author-block:hover .author-description{
+    color: var(--_main-color);
+    background-color: var(--_header-background-light);
+}
+.author-block:hover .older-post-header{
+    color: var(--_main-color);
+}
+.author-block:hover{
+    cursor: auto;
+}
+.author:hover .older-post-header{
+    color: var(--_main-color);
+    font-size: 1.35rem;
+}
+.page-header-container{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.page-text-container{
+    margin-top: 1rem;
+    width: 93vw;
+}
+.citate-block{
+    background-color: var(--_header-background-light);
+    padding: 1.4rem 2rem;
+}
+.image-container{
+    border: 1px solid var(--_trending-photo-border-color);
+    width: 96.8vw;
+    height: 30.9rem;
+}
+.author-name-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+/*--------------media-----------------------*/
+@media screen and (max-width: 1199px){
+    .page-header{
+        font-size: 5vw;
+    }
+    .time{
+        font-size: 1.3vw;
+    }
+
+    .author .older-post-photo-container {
+        width: 15.459rem;
+        background-size: cover;
+
+    }
+}
+@media screen and (max-width: 1023px){
+    .image-container{
+        height: 18.65em;
+    }
+}
+@media screen and (max-width: 645px) {
+    .page-header{
+        font-size: 2rem;
+    }
+}
